@@ -14,6 +14,7 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &offsetkey_physical_layout;
         zephyr,display = &oled;
+        zmk,backlight = &backlight;
     };
 
     backlight: pwmleds {
