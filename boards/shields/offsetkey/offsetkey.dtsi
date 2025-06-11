@@ -1,8 +1,4 @@
-ddeeeddd/*
- * Copyright (c) 2020 ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- 
+
 
 
 #include <dt-bindings/zmk/matrix_transform.h>
