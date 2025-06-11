@@ -1,0 +1,95 @@
+#define BASE 0
+#define LOWER 1
+#define MOUSE_KEYS 2
+#define MOUSE_TP 3
+#define MOUSE_TP_SET 4
+
+#include <input/processors.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
+
+/*
+ * Defines to enable/disable features
+ *
+ * These defines allow us to conditionally enable and disable parts of the keymap config.
+ *
+ * For example, if we decide to build the firmware without the mouse features, we can
+ * disable all the config options that rely on those forks and modules without having
+ * to edit the entire keymap file manually every time.
+ */
+
+#define HAS_MOUSE_KEYS
+#define HAS_MOUSE_TP
+
+#ifdef HAS_MOUSE_KEYS
+  #include <dt-bindings/zmk/mouse.h>
+  #include <behaviors/mouse_keys.dtsi>
+#endif  // HAS_MOUSE_KEYS
+
+#ifdef HAS_MOUSE_TP
+  // We store the trackpoint settings in a separate file
+  // to make organization a little easier.
+  #include "include/mouse_tp.dtsi"
+#endif  // HAS_MOUSE_TP
+
+
+
+// Adjust layer keys based on enabled features.
+//
+// This prevents build errors when we build the firmware
+// without the mouse keys PR or the TP module.
+#ifdef HAS_MOUSE_KEYS
+  #define U_THUMB_INNER &mo MOUSE_KEYS
+#else
+  #define U_THUMB_INNER &none
+#endif  // HAS_MOUSE_KEYS
+
+#ifdef HAS_MOUSE_TP
+  #define U_TOG_TP_SET &tog MOUSE_TP_SET
+#else
+  #define U_TOG_TP_SET &none
+#endif  // HAS_MOUSE_TP
+/ {
+    behaviors {
+
+        ltq: ltq {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTQ";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        flash {
+            bindings = <&bootloader>;
+            key-positions = <0 11>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+
+        BASE {
+            bindings = <
+&kp ESC    &kp N1    &kp N2    &kp N3     &kp N4  &kp N5     &kp N6      &kp N7  &kp N8     &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BSPC   &kp GRAVE
+&kp TAB    &kp Q     &kp W     &kp E      &kp R   &kp T                  &kp Y   &kp U      &kp I      &kp O     &kp P      &kp LBKT   &kp RBKT   &kp BSLH   &kp F1
+&kp CAPS   &kp A     &kp S     &kp D      &kp F   &kp G                  &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp APOS   &kp RSHFT  &kp F2
+&kp LSHFT  &kp Z     &kp X     &kp C      &kp V   &kp B                  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT  &kp ENTER  &kp F3
+&kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE          &kp SPACE                      &kp SPACE  &kp SPACE  &kp RGUI  &kp RALT   &kp RCTRL  &trans     &trans
+            >;
+
+            label = "BASE";
+        };
+    };
+
+};

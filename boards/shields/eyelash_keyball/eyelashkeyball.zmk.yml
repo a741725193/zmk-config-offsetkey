@@ -1,0 +1,13 @@
+file_format: "1"
+id: eyelashkeyball
+name: eyelashkeyball
+type: shield
+url: https://github.com/Yowkees/keyball
+requires: [pro_micro]
+features:
+  - keys
+  - pointer
+  - underglow
+siblings:
+  - eyelashkeyball_left
+  - eyelashkeyball_right

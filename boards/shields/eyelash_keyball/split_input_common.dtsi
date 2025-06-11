@@ -1,0 +1,55 @@
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+#define DEFAULT 0
+#define WIN 1
+#define SYMBOLS 2
+#define NUMBERS 18
+#define NAV 4
+#define FUNCTION 5
+#define BLUETOOTH 6
+#define MOUSE 7
+#define CLICK 8
+#define SCRL 9
+#define BIRO 10
+
+/ {
+  split_inputs {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    trackball_split: trackball_split@0 {
+      compatible = "zmk,input-split";
+      reg = <0>;
+    };
+    trackball_split2: trackball_split2@1 {
+      compatible = "zmk,input-split";
+      reg = <1>;
+    };
+  };
+
+  trackball_listener: trackball_listener {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    device = <&trackball_split>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP )>;
+    scroll {
+      layers = <SYMBOLS>;
+      input-processors = <&zip_xy_transform ( INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
+    };
+
+  };
+
+  trackball_listener2: trackball_listener2 {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    device = <&trackball_split2>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>;
+
+    scroll {
+      layers = <DEFAULT>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
+    };
+
+  };
+};

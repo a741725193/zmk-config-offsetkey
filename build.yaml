@@ -1,0 +1,8 @@
+include:
+  - board: eyelash_nano
+    shield: eyelashkeyball_left nice_oled
+    snippet: studio-rpc-usb-uart
+  - board: eyelash_nano
+    shield: eyelashkeyball_right nice_oled
+  - board: eyelash_nano
+    shield: settings_reset
