@@ -56,9 +56,9 @@
     row-gpios
 	= <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	, <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&gpio0 23  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	, <&gpio0 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	, <&gpio0 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	;
     col-gpios
         = <&gpio0 3  GPIO_ACTIVE_HIGH>
