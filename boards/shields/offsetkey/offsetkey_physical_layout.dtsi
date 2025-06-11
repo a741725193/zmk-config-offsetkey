@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 /{
-    	eyelashkeyball_physical_layout: eyelashkeyball_physical_layout {
+    	offsetkey_physical_layout: offsetkey_physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default";
         transform = <&default_transform>;

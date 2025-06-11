@@ -1,0 +1,5 @@
+config SHIELD_OFFSETKEY_LEFT
+    def_bool $(shields_list_contains,offsetkey_left)
+
+config SHIELD_OFFSETKEY_RIGHT
+    def_bool $(shields_list_contains,offsetkey_right)

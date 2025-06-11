@@ -1,6 +1,6 @@
 file_format: "1"
-id: eyelashkeyball
-name: eyelashkeyball
+id: offsetkey
+name: offsetkey
 type: shield
 url: https://github.com/Yowkees/keyball
 requires: [pro_micro]
@@ -9,5 +9,5 @@ features:
   - pointer
   - underglow
 siblings:
-  - eyelashkeyball_left
-  - eyelashkeyball_right
+  - offsetkey_left
+  - offsetkey_right

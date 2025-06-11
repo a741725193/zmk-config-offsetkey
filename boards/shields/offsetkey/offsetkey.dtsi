@@ -6,13 +6,13 @@
 
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "eyelashkeyball_physical_layout.dtsi"
+#include "offsetkey_physical_layout.dtsi"
 
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &eyelashkeyball_physical_layout;
+        zmk,physical-layout = &offsetkey_physical_layout;
         zephyr,display = &oled;
     };
 

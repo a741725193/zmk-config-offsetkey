@@ -1,5 +1,0 @@
-config SHIELD_EYELASHKEYBALL_LEFT
-    def_bool $(shields_list_contains,eyelashkeyball_left)
-
-config SHIELD_EYELASHKEYBALL_RIGHT
-    def_bool $(shields_list_contains,eyelashkeyball_right)
