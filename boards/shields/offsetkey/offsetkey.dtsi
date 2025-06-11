@@ -1,4 +1,4 @@
-/*
+ddeeeddd/*
  * Copyright (c) 2020 ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -27,7 +27,7 @@
 
     default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
-        columns = <16>;
+        columns = <18>;
         rows = <5>;
 
         map = <
