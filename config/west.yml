@@ -19,7 +19,7 @@ manifest:
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: main
-    - name: eyelashzmk-board-eyelash
+    - name: zmk-board-eyelash
       remote: eyelash
       revision: main
     - name: kb_zmk_ps2_mouse_trackpoint_driver
