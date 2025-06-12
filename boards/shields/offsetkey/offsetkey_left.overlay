@@ -10,7 +10,7 @@
         zmk,underglow = &led_strip;
         zmk,kscan = &kscan0;
     };
-}
+};
 &pinctrl {
 
     spi3_default: spi3_default {

@@ -11,7 +11,7 @@
         zmk,underglow = &led_strip;
         zmk,kscan = &kscan0;
     };
-}
+};
 
 &default_transform {
 	col-offset = <9>;
