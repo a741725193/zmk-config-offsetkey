@@ -1,16 +1,9 @@
-/*
- * Copyright (c) 2020 ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
-
 #include <dt-bindings/zmk/matrix_transform.h>
 #include  "offsetkey_physical_layout.dtsi"
 
 
 / {
-    chosen {
+     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &offsetkey_physical_layout;
         zephyr,display = &oled;
