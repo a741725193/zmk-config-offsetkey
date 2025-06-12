@@ -5,7 +5,7 @@
  */
 #include <dt-bindings/led/led.h>
 #include "offsetkey.dtsi"
-#include "trackpoint.dtsi"
+
 
 / {
 	chosen {

@@ -1,0 +1,41 @@
+/*
+ * Defines to enable/disable features
+ *
+ * These defines allow us to conditionally enable and disable parts of the keymap config.
+ *
+ * For example, if we decide to build the firmware without the mouse features, we can
+ * disable all the config options that rely on those forks and modules without having
+ * to edit the entire keymap file manually every time.
+ */
+
+#define HAS_MOUSE_KEYS
+#define HAS_MOUSE_TP
+
+#ifdef HAS_MOUSE_KEYS
+  #include <dt-bindings/zmk/mouse.h>
+  #include <behaviors/mouse_keys.dtsi>
+#endif  // HAS_MOUSE_KEYS
+
+#ifdef HAS_MOUSE_TP
+  // We store the trackpoint settings in a separate file
+  // to make organization a little easier.
+  #include "include/mouse_tp.dtsi"
+#endif  // HAS_MOUSE_TP
+
+
+
+// Adjust layer keys based on enabled features.
+//
+// This prevents build errors when we build the firmware
+// without the mouse keys PR or the TP module.
+#ifdef HAS_MOUSE_KEYS
+  #define U_THUMB_INNER &mo MOUSE_KEYS
+#else
+  #define U_THUMB_INNER &none
+#endif  // HAS_MOUSE_KEYS
+
+#ifdef HAS_MOUSE_TP
+  #define U_TOG_TP_SET &tog MOUSE_TP_SET
+#else
+  #define U_TOG_TP_SET &none
+#endif  // HAS_MOUSE_TP
