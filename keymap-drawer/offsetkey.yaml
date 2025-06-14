@@ -69,8 +69,8 @@ layers:
   - RGUI
   - $$mdi:apple-keyboard-control$$
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - EP ON
+  - EP OFF
   '1':
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
