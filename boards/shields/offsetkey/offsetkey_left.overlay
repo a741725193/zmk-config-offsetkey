@@ -63,7 +63,7 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <10>; /* 6 keys have underglow at the moment */
+        chain-length = <20>; /* 6 keys have underglow at the moment */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
 
