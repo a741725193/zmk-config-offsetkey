@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    - name: badjeff
+      url-base: https://github.com/badjeff
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
     - name: eyelash
@@ -16,7 +18,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: kumamuk-git
+      remote: badjeff
       revision: main
     - name: zmk-nice-oled
       remote: mctechnology17
