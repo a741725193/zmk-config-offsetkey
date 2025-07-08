@@ -6,21 +6,18 @@
 #include <dt-bindings/led/led.h>
 #include "offsetkey.dtsi"
 
-
 / {
-	chosen {
+    chosen {
         zmk,underglow = &led_strip;
         zmk,kscan = &kscan0;
     };
- 
 };
 
 &default_transform {
-	col-offset = <9>;
+    col-offset = <9>;
 };
 
 &pinctrl {
-
     spi3_default: spi3_default {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 1, 13)>; // WS2812_VEXT_DATA
@@ -33,20 +30,20 @@
             low-power-enable;
         };
     };
-my_gpio_default: my_gpio_default {
+
+    my_gpio_default: my_gpio_default {
         group1 {
             psels = <NRF_PSEL(GPIO, 1, 3)>; // P1.03
-            bias-pull-up;                   // 上拉确保高电平
-            drive-strength = <NRF_DRIVE_HIGH>; // 高驱动能力
+            bias-pull-up;
+            drive-strength = <NRF_DRIVE_HIGH>;
         };
     };
 
-    // 睡眠状态（低电平）
     my_gpio_sleep: my_gpio_sleep {
         group1 {
             psels = <NRF_PSEL(GPIO, 1, 3)>;
-            bias-pull-down;                // 下拉强制低电平
-            low-power-enable;              // 启用低功耗模式
+            bias-pull-down;
+            low-power-enable;
         };
     };
 };
@@ -56,22 +53,22 @@ my_gpio_default: my_gpio_default {
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     row-gpios
-	    = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	    , <&gpio0 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	    , <&gpio0 30  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	    , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 30 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	    ;
+        ;
     col-gpios
-        =  <&gpio0 2  GPIO_ACTIVE_HIGH>
-        ,  <&gpio0 21  GPIO_ACTIVE_HIGH>
-        , <&gpio1 9  GPIO_ACTIVE_HIGH>
-        , <&gpio0 14  GPIO_ACTIVE_HIGH>
-        , <&gpio0 12  GPIO_ACTIVE_HIGH>
-        , <&gpio0 8  GPIO_ACTIVE_HIGH>  
-        , <&gpio0 19  GPIO_ACTIVE_HIGH>  
-        , <&gpio0 16  GPIO_ACTIVE_HIGH>  
-        , <&gpio1 5  GPIO_ACTIVE_HIGH>  
+        = <&gpio0 2 GPIO_ACTIVE_HIGH>
+        , <&gpio0 21 GPIO_ACTIVE_HIGH>
+        , <&gpio1 9 GPIO_ACTIVE_HIGH>
+        , <&gpio0 14 GPIO_ACTIVE_HIGH>
+        , <&gpio0 12 GPIO_ACTIVE_HIGH>
+        , <&gpio0 8 GPIO_ACTIVE_HIGH>
+        , <&gpio0 19 GPIO_ACTIVE_HIGH>
+        , <&gpio0 16 GPIO_ACTIVE_HIGH>
+        , <&gpio1 5 GPIO_ACTIVE_HIGH>
         ;
 };
 
