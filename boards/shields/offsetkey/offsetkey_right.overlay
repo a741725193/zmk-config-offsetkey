@@ -65,22 +65,14 @@
     };
 };
 
-/* 在睡眠状态下设置低电平 */
 / {
     behaviors {
         slp_my_gpio: behavior_sleep_my_gpio {
             compatible = "zmk,behavior-gpio";
             label = "SLEEP_MY_GPIO";
-            gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>; // P1.00
-            behavior-sleep; // 标记为睡眠行为
+            gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+            behavior-sleep;
             #gpio-cells = <2>;
-        };
-    };
-
-    sleep: sleep {
-        sleep_my_gpio {
-            behavior = <&slp_my_gpio>;
-            low; // 睡眠时低电平
         };
     };
 };
