@@ -35,30 +35,7 @@
 
 
 
-    leds {
-        compatible = "gpio-leds";
-        led1 { gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; }; // LED1 引脚定义
-        led2 { gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>; }; // LED2 不受影响
-    };
 
-    behaviors {
-        // 自定义 LED 控制行为
-        led1_on: led1_on { gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; };
-        led1_off: led1_off { gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; };
-
-        // 层状态监听
-        layer_indicator: layer_indicator {
-            compatible = "zmk,layer-state";
-            on-layer-change = <
-                0 &led1_off  // 默认层关闭 LED1
-                1 &led1_on   // 第 1 层点亮 LED1
-            >;
-        };
-
-
-
-
-   };
 
 };
 
@@ -84,4 +61,35 @@
         , <&gpio0 16  GPIO_ACTIVE_HIGH>  
         , <&gpio1 5  GPIO_ACTIVE_HIGH>  
         ;
+};
+
+
+
+/ {
+    leds {
+        compatible = "gpio-leds";
+        led1 { gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; };
+        led2 { gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>; };
+    };
+
+    behaviors {
+        led1_on: led1_on { 
+            compatible = "zmk,behavior-gpio";
+            #binding-cells = <0>;
+            gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+        };
+        led1_off: led1_off {
+            compatible = "zmk,behavior-gpio";
+            #binding-cells = <0>;
+            gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+        };
+
+        layer_indicator: layer_indicator {
+            compatible = "zmk,layer-state";
+            on-layer-change = <
+                0 &led1_off
+                1 &led1_on
+            >;
+        };
+    };
 };
