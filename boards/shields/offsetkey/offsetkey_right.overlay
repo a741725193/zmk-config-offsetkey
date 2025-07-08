@@ -12,12 +12,7 @@
         zmk,underglow = &led_strip;
         zmk,kscan = &kscan0;
     };
-  ext-power-aux {
-        compatible = "zmk,ext-power-gpio";
-        label = "AUX_POWER";   // 新增副电源控制（P1.03）
-        control-gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>; // P1.03
-        init-delay-ms = <100>; // 可选：初始化延迟
-    };
+ 
 };
 
 &default_transform {
@@ -62,4 +57,47 @@
         , <&gpio0 16  GPIO_ACTIVE_HIGH>  
         , <&gpio1 5  GPIO_ACTIVE_HIGH>  
         ;
+};
+/ {
+    // 自定义 GPIO 控制节点
+    my_power_ctrl: my_power_ctrl {
+        compatible = "zmk,behavior-gpio";
+        label = "MY_POWER_CTRL";
+        gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>; // 使用 P1.03，高电平有效
+        pinctrl-0 = <&my_gpio_default>;     // 默认状态
+        pinctrl-1 = <&my_gpio_sleep>;       // 睡眠状态
+        pinctrl-names = "default", "sleep";  // 状态命名
+        #binding-cells = <2>;
+    };
+};
+
+&pinctrl {
+    // 默认状态（高电平）
+    my_gpio_default: my_gpio_default {
+        group1 {
+            psels = <NRF_PSEL(GPIO, 1, 3)>; // P1.03
+            bias-pull-up;                   // 上拉确保高电平
+            drive-strength = <NRF_DRIVE_HIGH>; // 高驱动能力
+        };
+    };
+
+    // 睡眠状态（低电平）
+    my_gpio_sleep: my_gpio_sleep {
+        group1 {
+            psels = <NRF_PSEL(GPIO, 1, 3)>;
+            bias-pull-down;                // 下拉强制低电平
+            low-power-enable;              // 启用低功耗模式
+        };
+    };
+};
+
+/ {
+    // 绑定到 ZMK 睡眠事件
+    behaviors {
+        sleep_control: sleep_control {
+            compatible = "zmk,behavior-sleep";
+            bindings = <&my_power_ctrl 0>; // 睡眠时拉低 P1.03
+            #binding-cells = <0>;
+        };
+    };
 };
