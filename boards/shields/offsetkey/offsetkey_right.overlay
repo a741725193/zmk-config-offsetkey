@@ -58,18 +58,7 @@
         , <&gpio1 5  GPIO_ACTIVE_HIGH>  
         ;
 };
-/ {
-    // 自定义 GPIO 控制节点
-    my_power_ctrl: my_power_ctrl {
-        compatible = "zmk,behavior-gpio";
-        label = "MY_POWER_CTRL";
-        gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>; // 使用 P1.03，高电平有效
-        pinctrl-0 = <&my_gpio_default>;     // 默认状态
-        pinctrl-1 = <&my_gpio_sleep>;       // 睡眠状态
-        pinctrl-names = "default", "sleep";  // 状态命名
-        #binding-cells = <2>;
-    };
-};
+
 
 &pinctrl {
     // 默认状态（高电平）
