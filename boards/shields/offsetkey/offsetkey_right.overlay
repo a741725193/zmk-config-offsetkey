@@ -59,7 +59,7 @@
 };
 &gpio1 {  // 注意使用gpio1因为P1.x通常属于GPIO1
     my_gpio: my_gpio {
-        gpio-hog;
+       
         gpios = <3 GPIO_ACTIVE_HIGH>;  // P1.00对应引脚0
         output-high;                   // 默认高电平
     };
