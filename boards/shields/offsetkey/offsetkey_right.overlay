@@ -35,7 +35,7 @@
 
 
 
-    &leds {
+    leds {
         compatible = "gpio-leds";
         led1 { gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; }; // LED1 引脚定义
         led2 { gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>; }; // LED2 不受影响
