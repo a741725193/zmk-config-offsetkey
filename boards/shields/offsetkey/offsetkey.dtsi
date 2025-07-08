@@ -58,3 +58,19 @@
         prechargep = <0x22>;
     };
 };
+/ {
+    behaviors {
+        sleep: sleep {
+            compatible = "zmk,sleep";
+        };
+    };
+
+    backlight: gpioleds {
+        compatible = "gpio-leds";
+        led_0 {
+            gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
+            // 绑定到休眠行为
+            sleep = <&sleep>;
+        };
+    };
+};
