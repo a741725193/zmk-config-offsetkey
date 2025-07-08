@@ -12,6 +12,12 @@
         zmk,underglow = &led_strip;
         zmk,kscan = &kscan0;
     };
+  ext-power-aux {
+        compatible = "zmk,ext-power-gpio";
+        label = "AUX_POWER";   // 新增副电源控制（P1.03）
+        control-gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>; // P1.03
+        init-delay-ms = <100>; // 可选：初始化延迟
+    };
 };
 
 &default_transform {
@@ -56,23 +62,4 @@
         , <&gpio0 16  GPIO_ACTIVE_HIGH>  
         , <&gpio1 5  GPIO_ACTIVE_HIGH>  
         ;
-};
-&gpio1 {  // 注意使用gpio1因为P1.x通常属于GPIO1
-    my_gpio: my_gpio {
-       
-        gpios = <3 GPIO_ACTIVE_HIGH>;  // P1.00对应引脚0
-        output-high;                   // 默认高电平
-    };
-};
-
-/ {
-    behaviors {
-        slp_my_gpio: behavior_sleep_my_gpio {
-            compatible = "zmk,behavior-gpio";
-            label = "SLEEP_MY_GPIO";
-            gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
-            behavior-sleep;
-            #gpio-cells = <2>;
-        };
-    };
 };
