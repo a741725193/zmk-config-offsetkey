@@ -33,9 +33,9 @@
 
     my_gpio_default: my_gpio_default {
         group1 {
-            psels = <NRF_PSEL(GPIO, 1, 3)>; // P1.03
+           psels = <NRF_PSEL(GPIO, 1, 3)>; // [修正] 确保括号匹配
             bias-pull-up;
-            drive-strength = <NRF_DRIVE_HIGH>;
+            drive-strength = <2>; // [修正] 使用具体数值替代可能的未定义宏
         };
     };
 
