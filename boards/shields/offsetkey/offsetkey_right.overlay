@@ -67,7 +67,6 @@
 
 
 
-
 / {
     leds {
         compatible = "gpio-leds";
@@ -75,36 +74,51 @@
         led1: led_1 {
             gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>; // P1.10
             label = "LED1";
+            // 添加以下属性以启用控制
+            zmk,bindings = <&led1_control>;
         };
         // LED2 (编号2)
         led2: led_2 {
             gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>; // P1.12
             label = "LED2";
+            zmk,bindings = <&led2_control>;
         };
     };
-};
 
-
-/ {
     behaviors {
-        // 控制 LED1 的行为（按下点亮，松开熄灭）
+        // LED1控制行为
         led1_control: led1_control {
-            compatible = "zmk,behavior-momentary";
-            bindings = <
-                &gpio1_set 10  // 按下时设置 P1.10 高电平
-                &gpio1_reset 10 // 松开时设置 P1.10 低电平
-            >;
+            compatible = "zmk,behavior-outputs";
+            #binding-cells = <1>;
+            outputs = <&led1>;
             label = "LED1_CONTROL";
         };
         
-        // 控制 LED2 的行为（按下点亮，松开熄灭）
+        // LED2控制行为
         led2_control: led2_control {
-            compatible = "zmk,behavior-momentary";
-            bindings = <
-                &gpio1_set 12  // 按下时设置 P1.12 高电平
-                &gpio1_reset 12 // 松开时设置 P1.12 低电平
-            >;
+            compatible = "zmk,behavior-outputs";
+            #binding-cells = <1>;
+            outputs = <&led2>;
             label = "LED2_CONTROL";
         };
+        
+        // 按键行为：按下点亮LED1，松开熄灭
+        led1_key: led1_key {
+            compatible = "zmk,behavior-momentary";
+            bindings = <
+                &led1_control 1  // 按下时点亮(1)
+                &led1_control 0  // 松开时熄灭(0)
+            >;
+            label = "LED1_KEY";
+        };
+        
+        // 按键行为：按下点亮LED2，松开熄灭
+        led2_key: led2_key {
+            compatible = "zmk,behavior-momentary";
+            bindings = <
+                &led2_control 1  // 按下时点亮(1)
+                &led2_control 0  // 松开时熄灭(0)
+            >;
+            label = "LED2_KEY";
+        };
     };
-};
