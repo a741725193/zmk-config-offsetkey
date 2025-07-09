@@ -68,7 +68,15 @@
 
 
 
-
+  keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+                &led1_key
+                &led2_key
+            >;
+        };
+    };
 
 
 
@@ -126,11 +134,5 @@
 
 
 
-&keymap {
-    bindings = <
-        &led1_toggle
-        &led2_toggle
-    >;
-};
 
 
