@@ -42,7 +42,7 @@
 &kp LSHFT  &kp Z         &kp X         &kp C   &kp V   &kp B                  &kp N   &kp M      &kp COMMA      &kp DOT   &kp FSLH   &kp RSHFT  &kp UP_ARROW      &kp F3
 &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1           &kp SPACE                     &mo 1   &kp RIGHT_ALT  &kp RGUI  &kp RCTRL  &kp LEFT   &ext_power EP_ON  &ext_power EP_OFF
             >;
-
+              &led0_on;
             label = "BASE";
         };
 
@@ -54,6 +54,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans          &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+    &leds_off;
         };
 
         layer_2 {
