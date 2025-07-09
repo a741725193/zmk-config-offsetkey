@@ -22,8 +22,8 @@ layers:
   - E
   - R
   - T
-  - '&led1_act'
-  - '&led2_act'
+  - '&led2_ctrl'
+  - '&led2_ctrl'
   - I
   - O
   - P
