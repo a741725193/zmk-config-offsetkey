@@ -14,6 +14,55 @@
         zmk,underglow = &led_strip;
         zmk,kscan = &kscan0;
     };
+
+
+
+leds {
+        compatible = "gpio-leds";
+        led1: led_1 {
+            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+            label = "LED1";
+        };
+        led2: led_2 {
+            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
+            label = "LED2";
+        };
+    };
+
+    behaviors {
+        led1_control: led1_control {
+            compatible = "zmk,behavior-outputs";
+            #binding-cells = <1>;
+            outputs = <&led1>;
+        };
+        
+        led2_control: led2_control {
+            compatible = "zmk,behavior-outputs";
+            #binding-cells = <1>;
+            outputs = <&led2>;
+        };
+        
+        led1_toggle: led1_toggle {
+            compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>;
+            bindings = <&led1_control 1>, <&led1_control 0>;
+        };
+        
+        led2_toggle: led2_toggle {
+            compatible = "zmk,behavior-momentary";
+            #binding-cells = <0>;
+            bindings = <&led2_control 1>, <&led2_control 0>;
+        };
+    };
+
+
+
+
+
+
+
+
+
 };
 
 &default_transform {
@@ -70,46 +119,3 @@
 
 
 
-
-
-/ {
-    leds {
-        compatible = "gpio-leds";
-        led1: led_1 {
-            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
-            label = "LED1";
-        };
-        led2: led_2 {
-            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
-            label = "LED2";
-        };
-    };
-
-    behaviors {
-        led1_control: led1_control {
-            compatible = "zmk,behavior-outputs";
-            #binding-cells = <1>;
-            outputs = <&led1>;
-        };
-        
-        led2_control: led2_control {
-            compatible = "zmk,behavior-outputs";
-            #binding-cells = <1>;
-            outputs = <&led2>;
-        };
-        
-        led1_toggle: led1_toggle {
-            compatible = "zmk,behavior-momentary";
-            #binding-cells = <0>;
-            bindings = <&led1_control 1>, <&led1_control 0>;
-        };
-        
-        led2_toggle: led2_toggle {
-            compatible = "zmk,behavior-momentary";
-            #binding-cells = <0>;
-            bindings = <&led2_control 1>, <&led2_control 0>;
-        };
-    };
-
-  
-};
