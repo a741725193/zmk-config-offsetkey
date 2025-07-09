@@ -109,24 +109,4 @@
     };
 };
 
-/ {
-    keymap {
-        layers = <
-            // 默认层（Layer 0）：关闭所有 LED
-            LAYER0(
-                DEFAULT_LAYER
-                &leds_off
-            )
-            // Layer 1：激活时点亮 LED0
-            LAYER1(
-                ...其他按键绑定...
-                &led0_on
-            )
-            // Layer 2：激活时点亮 LED1
-            LAYER2(
-                ...其他按键绑定...
-                &led1_on
-            )
-        >;
-    };
-};
+
