@@ -70,11 +70,11 @@
     leds {
         compatible = "gpio-leds";
         led0: led_0 {
-            gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>; // P0.12，高电平点亮
+            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>; // P0.10，高电平点亮
             label = "LED0";
         };
         led1: led_1 {
-            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>; // P0.13，高电平点亮
+            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>; // P0.12，高电平点亮
             label = "LED1";
         };
     };
