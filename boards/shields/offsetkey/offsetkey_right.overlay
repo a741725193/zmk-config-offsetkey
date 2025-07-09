@@ -17,7 +17,7 @@
 
 
 
-    leds {
+  leds {
         compatible = "gpio-leds";
         led1: led_1 {
             gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
@@ -30,43 +30,38 @@
     };
 
     behaviors {
-        // LED1控制 - 使用标准GPIO控制
-        led1_control: led1_control {
-            compatible = "zmk,behavior-gpio";
-            #binding-cells = <2>;
-            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
-            label = "LED1_CTRL";
-        };
-        
-        // LED2控制 - 使用标准GPIO控制
-        led2_control: led2_control {
-            compatible = "zmk,behavior-gpio";
-            #binding-cells = <2>;
-            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
-            label = "LED2_CTRL";
-        };
-        
-        // 按键行为：按下点亮，松开熄灭
-        led1_key: led1_key {
+        // LED1控制行为（按下点亮，松开熄灭）
+        led1_act: led1_act {
             compatible = "zmk,behavior-momentary";
             #binding-cells = <0>;
             bindings = <
-                &led1_control 1 1  // 按下点亮
-                &led1_control 1 0  // 松开熄灭
+                &gpio1_set 10 GPIO_ACTIVE_HIGH  // 按下动作
+                &gpio1_reset 10                  // 松开动作
             >;
+            label = "LED1_ACTION";
         };
         
-        led2_key: led2_key {
+        // LED2控制行为（按下点亮，松开熄灭）
+        led2_act: led2_act {
             compatible = "zmk,behavior-momentary";
             #binding-cells = <0>;
             bindings = <
-                &led2_control 1 1  // 按下点亮
-                &led2_control 1 0  // 松开熄灭
+                &gpio1_set 12 GPIO_ACTIVE_HIGH  // 按下动作
+                &gpio1_reset 12                  // 松开动作
             >;
+            label = "LED2_ACTION";
         };
     };
 
-
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+                &led1_act  // 绑定LED1控制
+                &led2_act  // 绑定LED2控制
+            >;
+        };
+    };
 
 
 
