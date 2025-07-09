@@ -65,31 +65,68 @@
 
 
 
+
 / {
     leds {
         compatible = "gpio-leds";
-        led1 { gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; };
-        led2 { gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>; };
+        led0: led_0 {
+            gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>; // P0.12，高电平点亮
+            label = "LED0";
+        };
+        led1: led_1 {
+            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>; // P0.13，高电平点亮
+            label = "LED1";
+        };
     };
+};
 
+/ {
     behaviors {
-        led1_on: led1_on { 
-            compatible = "zmk,behavior-gpio";
-            #binding-cells = <0>;
-            gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
-        };
-        led1_off: led1_off {
-            compatible = "zmk,behavior-gpio";
-            #binding-cells = <0>;
-            gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
-        };
-
-        layer_indicator: layer_indicator {
-            compatible = "zmk,layer-state";
-            on-layer-change = <
-                0 &led1_off
-                1 &led1_on
+        // 定义宏：点亮 LED0，关闭 LED1
+        led0_on: led0_on {
+            compatible = "zmk,behavior-macro";
+            bindings = <
+                &gpio0_set 12  // 设置 P0.12 为高电平
+                &gpio0_reset 13 // 设置 P0.13 为低电平
             >;
         };
+        // 定义宏：关闭 LED0，点亮 LED1
+        led1_on: led1_on {
+            compatible = "zmk,behavior-macro";
+            bindings = <
+                &gpio0_reset 12 // 关闭 P0.12
+                &gpio0_set 13    // 点亮 P0.13
+            >;
+        };
+        // 定义宏：关闭所有 LED
+        leds_off: leds_off {
+            compatible = "zmk,behavior-macro";
+            bindings = <
+                &gpio0_reset 12
+                &gpio0_reset 13
+            >;
+        };
+    };
+};
+
+/ {
+    keymap {
+        layers = <
+            // 默认层（Layer 0）：关闭所有 LED
+            LAYER0(
+                DEFAULT_LAYER
+                &leds_off
+            )
+            // Layer 1：激活时点亮 LED0
+            LAYER1(
+                ...其他按键绑定...
+                &led0_on
+            )
+            // Layer 2：激活时点亮 LED1
+            LAYER2(
+                ...其他按键绑定...
+                &led1_on
+            )
+        >;
     };
 };
