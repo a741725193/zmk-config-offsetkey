@@ -70,41 +70,12 @@
     leds {
         compatible = "gpio-leds";
         led0: led_0 {
-            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>; // P0.10，高电平点亮
+            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>; // P0.12，高电平点亮
             label = "LED0";
         };
         led1: led_1 {
-            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>; // P0.12，高电平点亮
+            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>; // P0.13，高电平点亮
             label = "LED1";
-        };
-    };
-};
-
-/ {
-    behaviors {
-        // 定义宏：点亮 LED0，关闭 LED1
-        led0_on: led0_on {
-            compatible = "zmk,behavior-macro";
-            bindings = <
-                &gpio0_set 12  // 设置 P0.12 为高电平
-                &gpio0_reset 13 // 设置 P0.13 为低电平
-            >;
-        };
-        // 定义宏：关闭 LED0，点亮 LED1
-        led1_on: led1_on {
-            compatible = "zmk,behavior-macro";
-            bindings = <
-                &gpio0_reset 12 // 关闭 P0.12
-                &gpio0_set 13    // 点亮 P0.13
-            >;
-        };
-        // 定义宏：关闭所有 LED
-        leds_off: leds_off {
-            compatible = "zmk,behavior-macro";
-            bindings = <
-                &gpio0_reset 12
-                &gpio0_reset 13
-            >;
         };
     };
 };
