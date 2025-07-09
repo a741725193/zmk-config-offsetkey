@@ -83,3 +83,28 @@
         };
     };
 };
+
+
+/ {
+    behaviors {
+        // 控制 LED1 的行为（按下点亮，松开熄灭）
+        led1_control: led1_control {
+            compatible = "zmk,behavior-momentary";
+            bindings = <
+                &gpio1_set 10  // 按下时设置 P1.10 高电平
+                &gpio1_reset 10 // 松开时设置 P1.10 低电平
+            >;
+            label = "LED1_CONTROL";
+        };
+        
+        // 控制 LED2 的行为（按下点亮，松开熄灭）
+        led2_control: led2_control {
+            compatible = "zmk,behavior-momentary";
+            bindings = <
+                &gpio1_set 12  // 按下时设置 P1.12 高电平
+                &gpio1_reset 12 // 松开时设置 P1.12 低电平
+            >;
+            label = "LED2_CONTROL";
+        };
+    };
+};
