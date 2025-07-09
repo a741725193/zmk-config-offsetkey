@@ -126,6 +126,11 @@
 
 
 
-
+&keymap {
+    bindings = <
+        &led1_toggle
+        &led2_toggle
+    >;
+};
 
 
