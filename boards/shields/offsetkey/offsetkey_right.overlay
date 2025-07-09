@@ -66,18 +66,20 @@
 
 
 
+
+
 / {
     leds {
         compatible = "gpio-leds";
-        led0: led_0 {
-            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>; // P0.12，高电平点亮
-            label = "LED0";
-        };
+        // LED1 (编号1)
         led1: led_1 {
-            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>; // P0.13，高电平点亮
+            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>; // P1.10
             label = "LED1";
+        };
+        // LED2 (编号2)
+        led2: led_2 {
+            gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>; // P1.12
+            label = "LED2";
         };
     };
 };
-
-
