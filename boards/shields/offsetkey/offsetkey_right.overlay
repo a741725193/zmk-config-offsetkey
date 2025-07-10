@@ -139,7 +139,7 @@ behaviors {
        ext-power2 {
            compatible = "zmk,ext-power-generic";
            label = "EXT_POWER2";
-           control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>; // 第二路电源控制
+           control-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; // 第二路电源控制
        };
    };
 
