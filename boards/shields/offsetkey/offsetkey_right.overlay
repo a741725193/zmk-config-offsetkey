@@ -68,6 +68,20 @@
 
 
 
+
+
+
+
+behaviors {
+      
+       ext_power2: ext_power2 {
+           compatible = "zmk,behavior-ext-power";
+           label = "EXT_POWER2";
+           #binding-cells = <0>;
+       };
+   };
+
+
 };
 
 &default_transform {
@@ -118,6 +132,16 @@
         , <&gpio1 5  GPIO_ACTIVE_HIGH>  
         ;
 };
+
+/ {
+      
+
+       ext-power2 {
+           compatible = "zmk,ext-power-generic";
+           label = "EXT_POWER2";
+           control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>; // 第二路电源控制
+       };
+   };
 
 
 
