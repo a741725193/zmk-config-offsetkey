@@ -11,9 +11,9 @@
 
 / {
      chosen {
-        zmk,kscan = &kscan0;
         zmk,physical-layout = &offsetkey_physical_layout;
         zephyr,display = &oled;
+        zmk,kscan = &kscan0;
         zmk,backlight = &backlight;
     };
 
@@ -48,10 +48,25 @@ backlight: pwmleds {
 
 
 
+	left_encoder: encoder_left {
+		compatible = "alps,ec11";
+		label = "LEFT_ENCODER";
+		resolution = <4>;
+        steps = <40>;
+        a-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+	    b-gpios = <&gpio0 25 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		status = "disabled";
+	};
+
+    sensors {
+		compatible = "zmk,keymap-sensors";
+		sensors = <&left_encoder>;
+	};
+
     default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
         columns = <18>;
-        rows = <5>;
+        rows = <6>;
 
         map = <
             RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6)            RC(0,9) RC(0,10) RC(0,11) RC(0,12) RC(0,13) RC(0,14) RC(0,15) RC(0,16)
@@ -59,12 +74,8 @@ backlight: pwmleds {
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                    RC(2,9) RC(2,10) RC(2,11) RC(2,12) RC(2,13) RC(2,14) RC(2,15) RC(2,16)
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                    RC(3,9) RC(3,10) RC(3,11) RC(3,12) RC(3,13) RC(3,14) RC(3,15) RC(3,16)
             RC(4,0) RC(4,1) RC(4,2) RC(4,3)         RC(4,5)                                     RC(4,11) RC(4,12) RC(4,13) RC(4,14) RC(4,15) RC(4,16) RC(4,17)
+            RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5)
         >;
-    };
-	
-    kscan0: kscan {
-        wakeup-source;
-        diode-direction = "col2row";
     };
 };    
 
