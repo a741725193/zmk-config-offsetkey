@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#include <behaviors/toggle_io.dtsi>
+#include <behaviors/on_io.dtsi> 
+#include <behaviors/off_io.dtsi> 
+
 / {
     behaviors {
         ltq: ltq {
@@ -62,7 +66,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans          &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans          &trans                      &trans  &trans    &tog_io 1 7   &trans  &trans  &trans  &trans
             >;
         };
     };
