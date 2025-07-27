@@ -14,7 +14,7 @@
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
-                psels = <NRF_PSEL(SPIM_SCK, 1, 11)>,
+                psels = <NRF_PSEL(SPIM_SCK, 1, 0)>,
                 <NRF_PSEL(SPIM_MOSI, 1, 6)>,
                 <NRF_PSEL(SPIM_MISO, 1, 6)>;
         };
@@ -22,7 +22,7 @@
 
     spi1_sleep: spi1_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 11)>,
+            psels = <NRF_PSEL(SPIM_SCK, 1, 0)>,
                 <NRF_PSEL(SPIM_MOSI, 1, 6)>,
                 <NRF_PSEL(SPIM_MISO, 1, 6)>;
             low-power-enable;
