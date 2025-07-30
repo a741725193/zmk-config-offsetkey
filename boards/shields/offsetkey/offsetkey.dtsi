@@ -9,11 +9,16 @@
         zephyr,display = &oled;
         zmk,backlight = &backlight;
     };
-
-    backlight: pwmleds {
-        compatible = "pwm-leds";
-        pwm_led_0 {
-            pwms = <&pwm0 0 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
+ backlight: gpioleds {
+        compatible = "gpio-leds";
+        led_0 {
+            gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
+        };
+        led_1 {
+            gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+        };
+        led_2 {
+            gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
         };
     };
 
