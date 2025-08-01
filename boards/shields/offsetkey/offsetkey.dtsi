@@ -92,7 +92,7 @@
 &pinctrl {
     backlight_default: backlight_default {
         group1 {
-            psels = <NRF_PSEL(GPIO_OUT, 0, 12)>; // P0.12
+            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>; // P0.12
             low-power-enable; // 休眠时自动进入低功耗状态
         };
     };
