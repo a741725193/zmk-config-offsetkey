@@ -11,7 +11,15 @@
     };
 
 
-
+  leds {
+        compatible = "gpio-leds";
+        backlight: backlight_led {
+            gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
+            label = "Backlight LED";
+            pinctrl-0 = <&backlight_default>;
+            pinctrl-names = "default";
+        };
+    };
 
 
 
@@ -76,17 +84,6 @@
 };
 
 
-/ {
-    leds {
-        compatible = "gpio-leds";
-        backlight: backlight_led {
-            gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED";
-            pinctrl-0 = <&backlight_default>;
-            pinctrl-names = "default";
-        };
-    };
-};
 
 
 &pinctrl {
