@@ -27,9 +27,9 @@ backlight: gpioleds {
             label = "Backlight LED 1";
             sleep-state = <0>;
         };
-     backlight_led1: led_1 {
+     backlight_led1: led_2 {
             gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED 1";
+            label = "Backlight LED 2";
             sleep-state = <0>;
         };
        
