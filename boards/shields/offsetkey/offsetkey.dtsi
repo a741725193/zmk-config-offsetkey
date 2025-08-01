@@ -11,44 +11,22 @@
     };
 
 
-backlight: gpioleds {
+
+
+
+
+  backlight: gpioleds {
         compatible = "gpio-leds";
-        
-        // LED 1
-        backlight_led0: led_0 {
-            gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>; // 根据硬件调整
-            label = "Backlight LED 0";
-            sleep-state = <0>; // 休眠时低电平关闭
+       led_0 {
+            gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
         };
-
-        // LED 2
-        backlight_led1: led_1 {
+        led_1 {
             gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED 1";
-            sleep-state = <0>;
         };
-     backlight_led2: led_2 {
+        led_2 {
             gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED 2";
-            sleep-state = <0>;
-        };
-       
+       };
     };
-
-
-
-//  backlight: gpioleds {
-//        compatible = "gpio-leds";
-//        led_0 {
-//            gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
-//        };
-//        led_1 {
-//            gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
-//        };
-//        led_2 {
-//            gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
-//        };
-//    };
 
     default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
