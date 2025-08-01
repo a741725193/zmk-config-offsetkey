@@ -63,3 +63,36 @@
         prechargep = <0x22>;
     };
 };
+
+&pinctrl {
+
+&led_0 {
+    status = "okay";
+    pinctrl-0 = <&led_0_default>;
+    pinctrl-1 = <&led_0_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
