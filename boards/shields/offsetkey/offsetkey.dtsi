@@ -81,7 +81,7 @@
             psels = <NRF_PSEL(PWM_OUT0, 0,27)>;
         };
         group2 {
-            psels = <NRF_PSEL(PWM_OUT2, 1,3)>;
+            psels = <NRF_PSEL(PWM_OUT2, 1,2)>;
         };
     };
     pwm0_sleep: pwm0_sleep {
@@ -90,7 +90,7 @@
             low-power-enable;
         };
         group2 {
-            psels = <NRF_PSEL(PWM_OUT2, 1, 3)>;
+            psels = <NRF_PSEL(PWM_OUT2, 1, 2)>;
             low-power-enable;
         };
     };
