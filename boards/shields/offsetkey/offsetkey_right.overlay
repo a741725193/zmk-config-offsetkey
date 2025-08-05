@@ -23,7 +23,7 @@ behaviors {
        ext_power2: ext_power2 {
            compatible = "zmk,behavior-ext-power";
            label = "EXT_POWER2";
-           #binding-cells = <0>;
+           #binding-cells = <1>;
        };
    };
 
