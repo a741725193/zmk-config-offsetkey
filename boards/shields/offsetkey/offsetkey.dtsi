@@ -15,7 +15,7 @@
 leds {
     compatible = "gpio-leds";
     led0: led_0 {
-        gpios = <&gpio0 27 PIN GPIO_ACTIVE_HIGH>;
+        gpios = <&gpio0 27  GPIO_ACTIVE_HIGH>;
         pinctrl-0 = <&led_default>;
         pinctrl-1 = <&led_sleep>;
         pinctrl-names = "default", "sleep";
@@ -84,18 +84,20 @@ leds {
 
 
 &pinctrl {
-    led_default: led_default {
+    
+    led0_default: led0_default {
         group1 {
-            pinmux = <GPIO_PIN_LED>;
-            output-high;  // 正常运行时点亮 LED
+            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>;   
+            output-high;
         };
     };
 
-    led_sleep: led_sleep {
+   
+    led0_sleep: led0_sleep {
         group1 {
-            pinmux = <GPIO_PIN_LED>;
-            output-low;   // 睡眠状态下关闭 LED
-            low-power-enable;
+            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>;
+            output-low;         
+            low-power-enable;   
         };
     };
 };
