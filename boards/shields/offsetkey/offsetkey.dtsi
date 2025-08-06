@@ -20,13 +20,13 @@
 backlight: pwmleds {
     compatible = "pwm-leds";
     pwm_led_0: pwm_led_0 {
-        pwms = <&pwm0 0 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
+        pwms = <&pwm0 0 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
     };
     pwm_led_1: pwm_led_1 {
-        pwms = <&pwm0 1 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
+        pwms = <&pwm0 1 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
     };
     pwm_led_2: pwm_led_2 {
-        pwms = <&pwm0 2 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
+        pwms = <&pwm0 2 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
     };
 };
 
