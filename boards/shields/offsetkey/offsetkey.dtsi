@@ -16,8 +16,8 @@ leds {
     compatible = "gpio-leds";
     led0: led0 {
        // gpios = <&gpio0 27  GPIO_ACTIVE_HIGH>;
-        pinctrl-0 = <&led_default>;
-        pinctrl-1 = <&led_sleep>;
+        pinctrl-0 = <&led0_default>;
+        pinctrl-1 = <&led0_sleep>;
         pinctrl-names = "default", "sleep";
     };
 };
