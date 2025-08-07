@@ -82,21 +82,21 @@
 
 
 
-&pinctrl {
+//    &pinctrl {
     
-    led_default: led_default {
-        group1 {
-            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>; 
-        };
-    };
+//    led_default: led_default {
+//        group1 {
+ //           psels = <NRF_PSEL(GPIO_OUT, 0, 27)>; 
+//        };
+//    };
 
   
-    led_sleep: led_sleep {
-        group1 {
-            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>;
-            bias-pull-down;  
-            output-low;    
-        };
-    };
-};
+//    led_sleep: led_sleep {
+//        group1 {
+//            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>;
+//            bias-pull-down;  
+//            output-low;    
+//        };
+//    };
+ //    };
 
