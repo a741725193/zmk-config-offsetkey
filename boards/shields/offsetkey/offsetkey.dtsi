@@ -18,7 +18,7 @@
     leds {
         compatible = "gpio-leds";
         led0: led_0 {
-            gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>; // 高电平点亮
+          //  gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>; // 高电平点亮
             label = "User LED";
         };
     };
