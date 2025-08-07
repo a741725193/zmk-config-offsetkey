@@ -1,4 +1,4 @@
-#include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/matrix_tranhttps://github.com/a741725193/zmk-config-offsetkey/actionssform.h>
 #include  "offsetkey_physical_layout.dtsi"
 
 
@@ -7,7 +7,7 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &offsetkey_physical_layout;
         zephyr,display = &oled;
-        zmk,backlight = &backlight;
+     //   zmk,backlight = &backlight;
     };
 
 
@@ -15,22 +15,14 @@
 
 
 
-  backlight: gpioleds {
-    compatible = "gpio-leds";
-    label = "Onboard LEDs";
-    led_0 {
-      gpios = <&gpio0 27 GPIO_PUSH_PULL>;
-      label = "Red LED";
+
+    leds {
+        compatible = "gpio-leds";
+        led0: led_0 {
+            gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>; // 高电平点亮
+            label = "User LED";
+        };
     };
-    led_1 {
-      gpios = <&gpio1 3 GPIO_PUSH_PULL>;
-      label = "Green LED";
-    };
-    led_2 {
-      gpios = <&gpio1 2 GPIO_PUSH_PULL>;
-      label = "Blue LED";
-    };
-  };
 
 
 
