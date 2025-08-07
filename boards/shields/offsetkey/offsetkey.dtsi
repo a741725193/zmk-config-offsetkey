@@ -86,14 +86,14 @@
     // 默认状态：正常工作时配置
     led_default: led_default {
         group1 {
-            psels = <NRF_PSEL(GPIO_OUT, 0, 5)>; // 使用 GPIO0.5
+            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>; // 使用 GPIO0.5
         };
     };
 
     // 睡眠状态：休眠时强制输出低电平
     led_sleep: led_sleep {
         group1 {
-            psels = <NRF_PSEL(GPIO_OUT, 0, 5)>;
+            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>;
             bias-pull-down;  // 可选：启用下拉电阻确保低电平
             output-low;      // 强制输出低电平熄灭 LED
         };
