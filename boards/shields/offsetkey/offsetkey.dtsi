@@ -19,11 +19,11 @@
     compatible = "gpio-leds";
     label = "Onboard LEDs";
     led_0 {
-      gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
+      gpios = <&gpio0 27 GPIO_OUTPUT | GPIO_ACTIVE_HIGH>;
       label = "Red LED";
     };
     led_1 {
-      gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+      gpios = <&gpio1 3 GPIO_OUTPUT | GPIO_ACTIVE_HIGH>;
       label = "Green LED";
     };
     led_2 {
