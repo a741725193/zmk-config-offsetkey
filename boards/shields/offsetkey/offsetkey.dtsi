@@ -15,13 +15,22 @@
 
 
 
-    leds {
-        compatible = "gpio-leds";
-        led0: led_0 {
-          //  gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>; // 高电平点亮
-            label = "User LED";
-        };
+  backlight: gpioleds {
+    compatible = "gpio-leds";
+    label = "Onboard LEDs";
+    led_0 {
+      gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+      label = "Red LED";
     };
+    led_1 {
+      gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
+      label = "Green LED";
+    };
+    led_2 {
+      gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+      label = "Blue LED";
+    };
+  };
 
 
 
@@ -81,22 +90,4 @@
 };
 
 
-
-//    &pinctrl {
-    
-//    led_default: led_default {
-//        group1 {
- //           psels = <NRF_PSEL(GPIO_OUT, 0, 27)>; 
-//        };
-//    };
-
-  
-//    led_sleep: led_sleep {
-//        group1 {
-//            psels = <NRF_PSEL(GPIO_OUT, 0, 27)>;
-//            bias-pull-down;  
-//            output-low;    
-//        };
-//    };
- //    };
 
