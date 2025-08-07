@@ -23,11 +23,11 @@
       label = "Red LED";
     };
     led_1 {
-      gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+      gpios = <&gpio1 3 GPIO_PUSH_PULL>;
       label = "Green LED";
     };
     led_2 {
-      gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+      gpios = <&gpio1 2 GPIO_PUSH_PULL>;
       label = "Blue LED";
     };
   };
