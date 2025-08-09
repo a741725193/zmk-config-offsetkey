@@ -1,17 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include  "offsetkey_physical_layout.dtsi"
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 
-
-#include <dt-bindings/zmk/matrix_transform.h>
-#include  "offsetkey_physical_layout.dtsi"
-
-
 / {
      chosen {
-        zmk,physical-layout = &offsetkey_physical_layout;
+        zmk,matrix-transform = &default_transform;
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,backlight = &backlight;
