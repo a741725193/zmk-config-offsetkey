@@ -16,6 +16,7 @@ layers:
   - {t: '=', s: +}
   - {t: '$$mdi:backspace$$', type: backspace}
   - '1'
+  - '6'
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -31,6 +32,7 @@ layers:
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
   - RGB ON
+  - T
   - $$mdi:apple-keyboard-caps$$
   - A
   - S
@@ -45,6 +47,7 @@ layers:
   - .
   - KP ENTER
   - RGB OFF
+  - G
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -59,6 +62,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:arrow-up-bold$$
   - F3
+  - B
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
@@ -71,6 +75,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - EP ON
   - EP OFF
+  - '&soft_off'
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
@@ -139,6 +144,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -154,7 +163,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   '2':
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
