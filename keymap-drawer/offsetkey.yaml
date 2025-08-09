@@ -75,7 +75,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - EP ON
   - EP OFF
-  - '&soft_off'
+  - $$mdi:keyboard-space$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
