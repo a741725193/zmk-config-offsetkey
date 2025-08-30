@@ -52,7 +52,7 @@
             , <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
-
+//only 1.04 1.07 remain
     kscan0: kscan_composite {
         compatible = "zmk,kscan-composite";
         rows = <6>;
