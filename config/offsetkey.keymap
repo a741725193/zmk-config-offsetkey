@@ -65,7 +65,7 @@
         layer_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans      &trans  &trans  &trans        &trans  &trans  &trans          &kp HOME                           &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans      trans  &trans  &trans  &trans  &trans  &trans          &trans      &kp END                       &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans       &trans  &trans  &trans  &trans  &trans  &trans          &trans      &kp END                       &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans           &trans           &trans        &trans        &trans  &trans  &trans          &kp INSERT           &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &rgb_ug RGB_OFF  &rgb_ug RGB_OFF  &trans        &trans        &trans  &trans  &trans          &trans               &trans
 &trans  &trans  &trans  &trans          &trans                               &trans           &trans        &trans        &trans  &trans  &bt BT_CLR_ALL  &bt BT_CLR           &trans
