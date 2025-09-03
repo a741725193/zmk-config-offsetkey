@@ -57,10 +57,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans              &trans   &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &trans  &trans  &trans  &trans &kp END                                            &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans  &kp INSERT                                                     &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans                                                      &trans 
-&trans  &trans  &trans  &trans          &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans       
-
-
-&trans
+&trans  &trans  &trans  &trans          &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans
 &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
