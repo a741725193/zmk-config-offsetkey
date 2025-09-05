@@ -56,3 +56,18 @@ config LED_PWM
     default y
 
 endif # ZMK_BACKLIGHT
+
+
+
+config BOARD_ENABLE_DCDC
+    bool "Enable DCDC mode"
+    select SOC_DCDC_NRF52X
+    default y
+    depends on (SHIELD_OFFSETKEY_LEFT || SHIELD_OFFSETKEY_RIGHT)
+
+config BOARD_ENABLE_DCDC_HV
+    bool "Enable High Voltage DCDC converter"
+    default y
+    select SOC_DCDC_NRF52X_HV
+    depends on (SHIELD_OFFSETKEY_LEFT || SHIELD_OFFSETKEY_RIGHT)
+
