@@ -95,11 +95,11 @@
 };
 
 / {
-  trackpoint_listener: trackpoint_listener {
-        compatible = "zmk,input-listener";
-        status = "okay";
-        device = <&mouse_ps2>;
-    };
+//   trackpoint_listener: trackpoint_listener {
+//         compatible = "zmk,input-listener";
+//         status = "okay";
+//         device = <&mouse_ps2>;
+//     };
   trackball_listener: trackball_listener {
     compatible = "zmk,input-listener";
     status = "okay";
