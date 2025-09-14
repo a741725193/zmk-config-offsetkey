@@ -53,7 +53,7 @@
 &kp CAPS      &kp A           &kp S            &kp D           &kp F      &kp G                  &kp H   &kp J      &kp K          &kp L    &kp SEMI   &kp APOS   &kp KP_ENTER  &rgb_ug RGB_OFF                  &kp G
 &kp LSHFT     &kp Z           &kp X            &kp C           &kp V      &kp B                  &kp N   &kp M      &kp COMMA      &kp DOT  &kp FSLH   &kp RSHFT  &kp UP_ARROW  &kp F5                           &kp B
 &kp LCTRL     &kp LEFT_GUI    &kp LEFT_ALT     &mo 1                      &kp SPACE                      &kp SPACE  &kp RIGHT_ALT  &mo 2    &kp RCTRL  &kp LEFT   &kp DOWN      &kp RIGHT                        &kp SPACE
-&kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &ltq U_TOG_TP_SET SPACE
+&kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &kp SPACE
             >;
 
             label = "BASE";
