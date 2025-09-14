@@ -309,8 +309,8 @@
         tp-val6-upper-speed = <127>; 
         tp-xy-swap;
 	//	tp-sensitivity = <128>;
-	//	tp-x-invert;
-	//	tp-y-invert;
+		tp-x-invert;
+		tp-y-invert;
 	//	sampling-rate = <80>;
 };
 
