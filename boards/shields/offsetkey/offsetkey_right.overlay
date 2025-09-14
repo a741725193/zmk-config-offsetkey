@@ -8,6 +8,7 @@
 #include <dt-bindings/led/led.h>
 #include "offsetkey.dtsi"
 #include "trackball.dtsi"
+#include "trackpoint.dtsi"
 #define SYMBOLS 2
 #include "rgb.dtsi"
 
@@ -93,10 +94,12 @@
     };
 };
 
-
-
-
 / {
+  trackpoint_listener: trackpoint_listener {
+        compatible = "zmk,input-listener";
+        status = "okay";
+        device = <&mouse_ps2>;
+    };
   trackball_listener: trackball_listener {
     compatible = "zmk,input-listener";
     status = "okay";

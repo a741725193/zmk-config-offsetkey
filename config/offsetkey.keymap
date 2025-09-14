@@ -3,7 +3,14 @@
 #define MOUSE_KEYS 2
 #define MOUSE_TP 3
 #define MOUSE_TP_SET 4
+#define HAS_MOUSE_TP
+#define U_TOG_TP_SET &tog MOUSE_TP_SET
 
+// We store the trackpoint settings in a separate file
+// to make organization a little easier.
+#include "include/mouse_tp.dtsi"
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors/mouse_keys.dtsi>
 #include <behaviors/toggle_io.dtsi>
 #include <behaviors/on_io.dtsi>
 #include <behaviors/off_io.dtsi>
@@ -44,7 +51,7 @@
 &kp CAPS      &kp A           &kp S            &kp D           &kp F      &kp G                  &kp H   &kp J      &kp K          &kp L    &kp SEMI   &kp APOS   &kp KP_ENTER  &rgb_ug RGB_OFF                  &kp G
 &kp LSHFT     &kp Z           &kp X            &kp C           &kp V      &kp B                  &kp N   &kp M      &kp COMMA      &kp DOT  &kp FSLH   &kp RSHFT  &kp UP_ARROW  &kp F5                           &kp B
 &kp LCTRL     &kp LEFT_GUI    &kp LEFT_ALT     &mo 1                      &kp SPACE                      &kp SPACE  &kp RIGHT_ALT  &mo 2    &kp RCTRL  &kp LEFT   &kp DOWN      &kp RIGHT                        &kp SPACE
-&kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &kp SPACE
+&kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &ltq U_TOG_TP_SET SPACE
             >;
 
             label = "BASE";
@@ -81,6 +88,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
 &trans  &trans  &trans  &trans          &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
 &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+        layer_4 {
+            bindings = <
+U_TOG_TP_SET  U_TOG_TP_SET   &trans  U_MSS_TP_S_D   U_MSS_TP_S_I     U_MSS_TP_PT_I     &trans      U_MSS_TP_PT_I   U_MSS_TP_S_D  U_MSS_TP_S_I   U_TOG_TP_SET  U_TOG_TP_SET  &trans  &trans  &trans          &trans
+U_MSS_RESET  U_MSS_RESET   &trans  U_MSS_TP_NI_D  U_MSS_TP_NI_I   U_MSS_TP_PT_D              &trans  U_MSS_TP_PT_D  U_MSS_TP_NI_D  U_MSS_TP_NI_I  U_MSS_RESET  U_MSS_RESET  &trans  &trans  &trans  &trans
+U_MSS_LOG  U_MSS_LOG   &trans  U_MSS_TP_V6_D  U_MSS_TP_V6_I  &trans              &trans  &trans  U_MSS_TP_V6_D  U_MSS_TP_V6_I  &trans  &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans          &trans                      &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans   &mkp LCLK   &mkp RCLK
             >;
         };
     };
