@@ -274,7 +274,7 @@
     };
 
     mouse_ps2_input_listener: mouse_ps2_input_listener {
-        compatible = "zmk,input-listener-ps2";
+        compatible = "zmk,input-listener";
         status = "disabled";
 
         device = <&mouse_ps2>;
@@ -304,19 +304,18 @@
 &mouse_ps2 {
     status = "okay";
 		disable-clicking;
-        tp-sensitivity = <70>; 
-        tp-neg-inertia = <3>; 
-        tp-val6-upper-speed = <127>; 
-    //    tp-xy-swap;
-	//	tp-sensitivity = <128>;
+    //    tp-sensitivity = <70>; 
+    //    tp-neg-inertia = <3>; 
+    //    tp-val6-upper-speed = <127>; 
+    //  tp-xy-swap;
+		tp-sensitivity = <128>;
 		tp-x-invert;
 		tp-y-invert;
-	//	sampling-rate = <80>;
+		sampling-rate = <80>;
 };
 
 &mouse_ps2_input_listener {
   status = "okay";
-  xy-swap;
 };
 
 &uart0 {
