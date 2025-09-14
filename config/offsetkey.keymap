@@ -4,7 +4,6 @@
 #define MOUSE_TP 3
 #define MOUSE_TP_SET 4
 #define HAS_MOUSE_TP
-#define U_TOG_TP_SET &tog MOUSE_TP_SET
 
 // We store the trackpoint settings in a separate file
 // to make organization a little easier.
@@ -18,7 +17,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-
+#define U_TOG_TP_SET &tog MOUSE_TP_SET
 / {
     behaviors {
         ltq: ltq {
