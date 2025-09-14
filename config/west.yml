@@ -30,9 +30,6 @@ manifest:
     - name: zmk-board-eyelash
       remote: eyelash
       revision: main
-    - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: infused-kim
-      revision: main
     - name: zmk-tog-io
       remote: a741725193
       revision: main
