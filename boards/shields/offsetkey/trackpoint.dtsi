@@ -304,10 +304,13 @@
 &mouse_ps2 {
     status = "okay";
 		disable-clicking;
-		tp-sensitivity = <128>;
-		tp-x-invert;
-		tp-y-invert;
-		sampling-rate = <80>;
+        tp-sensitivity = <70>; 
+        tp-neg-inertia = <3>; 
+        tp-val6-upper-speed = <127>; 
+	//	tp-sensitivity = <128>;
+	//	tp-x-invert;
+	//	tp-y-invert;
+	//	sampling-rate = <80>;
 };
 
 &mouse_ps2_input_listener {
