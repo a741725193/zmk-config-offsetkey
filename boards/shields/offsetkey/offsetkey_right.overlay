@@ -7,7 +7,7 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/led/led.h>
 #include "offsetkey.dtsi"
-#include "trackball.dtsi"
+//#include "trackball.dtsi"
 #include "split_inputs.dtsi"
 #include "trackpoint.dtsi"
 #define SYMBOLS 2
@@ -95,16 +95,3 @@
     };
 };
 
-&trackpoint_split { device = <&mouse_ps2>; };
-/ {
-  trackball_listener: trackball_listener {
-    compatible = "zmk,input-listener";
-    status = "okay";
-    device = <&trackball>;
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP )>;
-    scroll {
-      layers = <SYMBOLS>;
-      input-processors = <&zip_xy_transform ( INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
-    };
-  };
-}; 
