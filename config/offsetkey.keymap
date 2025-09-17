@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/toggle_io.dtsi>
-#include <behaviors/on_io.dtsi>
-#include <behaviors/off_io.dtsi>
+//#include <behaviors/on_io.dtsi>
+//#include <behaviors/off_io.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
