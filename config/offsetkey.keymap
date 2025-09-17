@@ -92,15 +92,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-        layer_4 {
-            bindings = <
-U_TOG_TP_SET  U_TOG_TP_SET   &trans  U_MSS_TP_S_D   U_MSS_TP_S_I     U_MSS_TP_PT_I     &trans      U_MSS_TP_PT_I   U_MSS_TP_S_D  U_MSS_TP_S_I   U_TOG_TP_SET  U_TOG_TP_SET  &trans  &trans  &trans          &trans
-U_MSS_RESET  U_MSS_RESET   &trans  U_MSS_TP_NI_D  U_MSS_TP_NI_I   U_MSS_TP_PT_D              &trans  U_MSS_TP_PT_D  U_MSS_TP_NI_D  U_MSS_TP_NI_I  U_MSS_RESET  U_MSS_RESET  &trans  &trans  &trans  &trans
-U_MSS_LOG  U_MSS_LOG   &trans  U_MSS_TP_V6_D  U_MSS_TP_V6_I  &trans              &trans  &trans  U_MSS_TP_V6_D  U_MSS_TP_V6_I  &trans  &trans  &trans  &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
-&trans  &trans  &trans  &trans          &trans                      &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans          &trans
-&trans  &trans  &trans  &trans   &mkp LCLK   &mkp RCLK
-            >;
-        };
+  //      layer_4 {
+//            bindings = <
+//  U_TOG_TP_SET  U_TOG_TP_SET   &trans  U_MSS_TP_S_D   U_MSS_TP_S_I     U_MSS_TP_PT_I     &trans      U_MSS_TP_PT_I   U_MSS_TP_S_D  U_MSS_TP_S_I   U_TOG_TP_SET  U_TOG_TP_SET  &trans  &trans  &trans          &trans
+//     U_MSS_RESET  U_MSS_RESET   &trans  U_MSS_TP_NI_D  U_MSS_TP_NI_I   U_MSS_TP_PT_D              &trans  U_MSS_TP_PT_D  U_MSS_TP_NI_D  U_MSS_TP_NI_I  U_MSS_RESET  U_MSS_RESET  &trans  &trans  &trans  &trans
+//     U_MSS_LOG  U_MSS_LOG   &trans  U_MSS_TP_V6_D  U_MSS_TP_V6_I  &trans              &trans  &trans  U_MSS_TP_V6_D  U_MSS_TP_V6_I  &trans  &trans  &trans  &trans          &trans
+//    &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+//    &trans  &trans  &trans  &trans          &trans                      &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans          &trans
+//    &trans  &trans  &trans  &trans   &mkp LCLK   &mkp RCLK
+//            >;
+  //      };
     };
 };
