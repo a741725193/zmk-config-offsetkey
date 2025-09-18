@@ -307,7 +307,7 @@
     //    tp-sensitivity = <70>; 
     //    tp-neg-inertia = <3>; 
     //    tp-val6-upper-speed = <127>; 
-      tp-xy-swap;
+      tp-xy-swap=1;
 		tp-sensitivity = <128>;
 		tp-x-invert;
 		tp-y-invert;
