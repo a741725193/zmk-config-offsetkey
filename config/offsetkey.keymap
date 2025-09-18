@@ -9,7 +9,7 @@
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
-#include <behaviors/toggle_io.dtsi>
+//#include <behaviors/toggle_io.dtsi>
 //#include <behaviors/on_io.dtsi>
 //#include <behaviors/off_io.dtsi>
 #include <behaviors.dtsi>
