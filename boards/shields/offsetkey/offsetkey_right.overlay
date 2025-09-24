@@ -7,7 +7,7 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/led/led.h>
 #include "offsetkey.dtsi"
-//#include "trackball.dtsi"
+#include "trackball.dtsi"
 #include "split_inputs.dtsi"
 #include "trackpoint.dtsi"
 #define SYMBOLS 2
