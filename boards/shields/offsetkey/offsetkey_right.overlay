@@ -11,6 +11,7 @@
 #include "split_inputs.dtsi"
 #include "trackpoint.dtsi"
 #define SYMBOLS 2
+#define mouse_tp.dtsi
 //#include "rgb.dtsi"
 
 / {
