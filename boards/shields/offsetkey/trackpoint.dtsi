@@ -307,13 +307,12 @@
       tp-sensitivity = <70>; 
        tp-neg-inertia = <3>; 
        tp-val6-upper-speed = <127>; 
-   // tp-xy-swap;
+  tp-xy-swap;
 		tp-sensitivity = <128>;
-	//	tp-x-invert;
-	//	tp-y-invert;
+tp-x-invert;
+	tp-y-invert;
 		sampling-rate = <80>;
-  x-input-code = <INPUT_REL_Y>;
-        y-input-code = <INPUT_REL_X>;
+ 
 };
 
 &mouse_ps2_input_listener {
