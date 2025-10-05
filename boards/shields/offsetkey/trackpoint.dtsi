@@ -316,6 +316,9 @@
 
 &mouse_ps2_input_listener {
   status = "okay";
+
+        x-input-code = <INPUT_REL_Y>;
+        y-input-code = <INPUT_REL_X>;
 };
 
 &uart0 {
