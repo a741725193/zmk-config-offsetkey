@@ -276,7 +276,8 @@
     mouse_ps2_input_listener: mouse_ps2_input_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-
+      x-input-code = <INPUT_REL_Y>;
+        y-input-code = <INPUT_REL_X>;
         device = <&mouse_ps2>;
     };
 };
