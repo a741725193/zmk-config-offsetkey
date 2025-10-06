@@ -14,6 +14,8 @@ manifest:
       url-base: https://github.com/infused-kim
     - name: a741725193
       url-base: https://github.com/a741725193
+    - name: madswolf
+      url-base: https://github.com/madswolf
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -29,10 +31,7 @@ manifest:
       remote: eyelash
       revision: main
     - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: infused-kim
+      remote: madswolf
       revision: main
-    - name: zmk-tog-io
-      remote: a741725193
-      revision: main 
   self:
     path: config
