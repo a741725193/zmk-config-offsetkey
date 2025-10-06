@@ -301,68 +301,7 @@
 //&mouse_ps2 {
 //};
 
-  &mouse_ps2 {
-
-      // How sensitive the TP is (Default: 128)
-      // tp-sensitivity = <48>;
-
-
-      // The maximum mouse movement speed the TP will accelarate to
-      // (Default: 97)
-      // tp-val6-upper-speed = <130>;
-
-
-      // Not quite sure what it does tbh :) (Default: 6)
-      // tp-neg-inertia = <6>;
-
-
-      // Enable clicking by tapping on the TP.
-      // Not all TPs support this.
-      // tp-press-to-select;
-      // tp-press-to-select-threshold = <10>;
-
-
-      // Adjust axis settings on the TP
-      // Works only on some trackpoints, but may be properly considered by the
-      // trackpoint's acceleration features (which may or may not have an
-      // impact).
-      //
-      // Alternatively consider achieving the same effect using the
-      //  `input-listener` settings below.
-      // tp-xy-swap;
-      // tp-x-invert;
-      // tp-y-invert;
-
-
-      // Set sampling rate
-      //
-      // The frequency at which the mouse samples and sends data (in hz).
-      // The default rate is 100. You can try lowering it if you experience
-      // connection errors.
-      //
-      // Higher values than 100 are no improvement in my experience, but will
-      // increase battery life and potentially errors in transmissions.
-      //
-      // These values are allowed: 10,20,40,60,80,100,200
-      //
-      // If you are using mouse acceleration, please make sure to set the
-      // same value for the input-default-sending-rate option.
-      // sampling-rate = <PS2_MOUSE_SAMPLING_RATE>;
-
-
-      // Disables clicking.
-      // Useful when using the PS2 GPIO driver that is prone to
-      // erros in transmissions to reduce accidental clicks.
-      // disable-clicking;
-
-
-      // Enable scroll wheel
-      // For mouse devices supporting the Intellimouse extension. Not relevant
-      // for trackpoints
-      // scroll-mode;
-
-    };
-
+ 
 &mouse_ps2_input_listener {
   status = "okay";
 
