@@ -12,7 +12,7 @@
 #include "trackpoint.dtsi"
 #define SYMBOLS 2
 
-//#include "rgb.dtsi"
+
 
 / {
 	chosen {
