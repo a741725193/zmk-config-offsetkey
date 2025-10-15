@@ -23,9 +23,9 @@ layers:
   - E
   - R
   - T
-  - Y
-  - U
-  - I
+  - BT CLR ALL
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - O
   - P
   - {t: '[', s: '{'}
