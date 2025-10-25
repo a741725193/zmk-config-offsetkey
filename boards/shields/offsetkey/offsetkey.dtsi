@@ -46,6 +46,7 @@ backlight: pwmleds {
 
     default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
+         wakeup-source;
         columns = <19>;
         rows = <6>;
 
