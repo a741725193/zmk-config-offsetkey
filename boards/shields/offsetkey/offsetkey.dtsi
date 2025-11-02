@@ -12,23 +12,17 @@
 / {
      chosen {
         zmk,physical-layout = &offsetkey_physical_layout;
-        zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,backlight = &backlight;
     };
 
-backlight: pwmleds {
-    compatible = "pwm-leds";
-   // pwm_led_0: pwm_led_0 {
-   //     pwms = <&pwm0 0 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
-  //  };
-    pwm_led_1: pwm_led_1 {
-        pwms = <&pwm0 1 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        pwm_led_1: pwm_led_1 {
+            pwms = <&pwm0 1 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
+        };
     };
-  //  pwm_led_2: pwm_led_2 {
-   //     pwms = <&pwm0 2 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
-  //  };
-};
+
 	left_encoder: encoder_left {
 		compatible = "alps,ec11";
 		label = "LEFT_ENCODER";
@@ -60,30 +54,6 @@ backlight: pwmleds {
         >;
     };
 };    
-
-&i2c0 {
-	status = "okay";
-	compatible = "nordic,nrf-twi";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <31>;
-        segment-remap;
-        com-invdir;
-        com-sequential;
-        inversion-on;
-        prechargep = <0x22>;
-    };
-};
-
-
 
 &pinctrl {
     // Other Pinctrl definitions go here

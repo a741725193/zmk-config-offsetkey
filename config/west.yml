@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/a741725193
     - name: infused-kim
       url-base: https://github.com/infused-kim
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
     - name: a741725193
       url-base: https://github.com/a741725193
   projects:
@@ -33,6 +35,9 @@ manifest:
       revision: main
     - name: zmk-tog-io
       remote: a741725193
-      revision: main 
+      revision: main
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: main
   self:
     path: config
