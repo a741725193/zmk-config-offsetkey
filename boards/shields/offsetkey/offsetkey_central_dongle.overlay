@@ -74,3 +74,7 @@
         prechargep = <0x22>;
 	};
 };
+
+&trackball_listener {
+    status = "okay";
+};
