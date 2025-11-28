@@ -41,11 +41,11 @@
 
         BASE {
             bindings = <
-&kp ESC       &kp N1          &kp N2           &kp N3          &kp N4     &kp N5     &kp N6      &kp N7     &kp N8     &kp N9     &kp N0      &kp MINUS  &kp EQUAL  &kp BSPC      &kp DELETE            &kp NUMBER_6
-&kp TAB       &kp Q           &kp W            &kp E           &kp R      &kp T                  &kp Y      &kp U      &kp I      &kp O       &kp P      &kp LBKT   &kp RBKT      &kp BSLH    &kp HOME  &kp T
-&kp LCTRL     &kp A           &kp S            &kp D           &kp F      &kp G                  &kp H      &kp J      &kp K      &kp L       &kp SEMI   &kp APOS   &kp ENTER     &kp END               &kp G
-&kp LSHFT     &kp Z           &kp X            &kp C           &kp V      &kp B                  &kp N      &kp M      &kp COMMA  &kp DOT     &kp FSLH   &kp RSHFT  &kp UP_ARROW  &mo 3                 &kp B
-&mo 1         &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT               &kp SPACE                         &kp SPACE  &mo 2      &kp C_MENU  &kp RCTRL  &kp LEFT   &kp DOWN      &kp RIGHT             &kp SPACE
+&kp ESC       &kp N1          &kp N2           &kp N3          &kp N4     &kp N5     &kp N6      &kp N7     &kp N8     &kp N9     &kp N0                  &kp MINUS  &kp EQUAL  &kp BSPC      &kp DELETE            &kp NUMBER_6
+&kp TAB       &kp Q           &kp W            &kp E           &kp R      &kp T                  &kp Y      &kp U      &kp I      &kp O                   &kp P      &kp LBKT   &kp RBKT      &kp BSLH    &kp HOME  &kp T
+&kp LCTRL     &kp A           &kp S            &kp D           &kp F      &kp G                  &kp H      &kp J      &kp K      &kp L                   &kp SEMI   &kp APOS   &kp ENTER     &kp END               &kp G
+&kp LSHFT     &kp Z           &kp X            &kp C           &kp V      &kp B                  &kp N      &kp M      &kp COMMA  &kp DOT                 &kp FSLH   &kp RSHFT  &kp UP_ARROW  &mo 3                 &kp B
+&mo 1         &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT               &kp SPACE                         &kp SPACE  &mo 2      &kp LS(K_CONTEXT_MENU)  &kp RCTRL  &kp LEFT   &kp DOWN      &kp RIGHT             &kp SPACE
 &kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &kp DEL                &mkp LCLK  &mkp MCLK  &mkp RCLK  &none
             >;
 
@@ -62,6 +62,8 @@
 &trans     &trans  &trans  &trans          &trans                         &kp NUMBER_0  &kp DOT       &trans        &trans     &trans   &trans  &trans                       &trans
 &trans     &trans  &trans  &trans  &trans  &trans              &trans     &trans        &trans        &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         layer_2 {
