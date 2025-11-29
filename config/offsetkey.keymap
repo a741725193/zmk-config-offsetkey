@@ -56,11 +56,11 @@
         layer_1 {
             bindings = <
 &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7     &kp F8        &kp F9        &kp F10       &kp F11    &kp F12  &kp DELETE  &kp PG_UP                   &kp F6
-&trans     &trans  &trans  &trans  &trans  &trans              &mkp LCLK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans     &trans   &trans      &trans         &kp PAGE_UP  &trans
-&trans     &trans  &trans  &trans  &trans  &trans              &mkp RCLK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ENTER  &trans   &trans      &kp PAGE_DOWN               &trans
-&trans     &trans  &trans  &trans  &trans  &trans              &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &trans   &trans      &kp PG_DN                   &trans
-&trans     &trans  &trans  &trans          &trans                         &kp NUMBER_0  &kp DOT       &trans        &trans     &trans   &trans      &trans                      &trans
-&trans     &trans  &trans  &trans  &trans  &trans              &trans     &trans        &trans        &trans
+&none      &none   &none   &none   &none   &none               &mkp LCLK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none      &none    &none       &none          &kp PAGE_UP  &none
+&none      &none   &none   &none   &none   &none               &mkp RCLK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ENTER  &none    &none       &kp PAGE_DOWN               &none
+&none      &none   &none   &none   &none   &none               &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &none    &none       &kp PG_DN                   &none
+&none      &none   &none   &none           &none                          &kp NUMBER_0  &kp DOT       &none         &none      &none    &none       &none                       &none
+&none      &none   &none   &none   &none   &none               &none      &none         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -68,12 +68,12 @@
 
         layer_2 {
             bindings = <
-&kp TILDE     &kp F1        &kp F2           &kp F3          &kp F4             &kp F5  &kp F6      &kp F7         &kp F8    &kp F9     &kp F10          &kp F11   &kp F12  &trans          &rgb_ug RGB_TOG                   &kp F6
-&trans        &trans        &kp LC(PAGE_UP)  &mmv MOVE_UP    &kp LC(PAGE_DOWN)  &trans              &kp PAGE_UP    &trans    &kp UP     &trans           &kp HOME  &trans   &trans          &trans           &rgb_ug RGB_EFF  &trans
-&trans        &trans        &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans              &kp PAGE_DOWN  &kp LEFT  &kp DOWN   &kp RIGHT_ARROW  &kp END   &trans   &trans          &rgb_ug RGB_HUI                   &trans
-&trans        &trans        &trans           &trans          &trans             &trans              &trans         &trans    &mkp LCLK  &mkp RCLK        &trans    &trans   &trans          &rgb_ug RGB_HUD                   &trans
-&trans        &trans        &trans           &trans                             &trans                             &trans    &trans     &trans           &trans    &trans   &bt BT_CLR_ALL  &bt BT_CLR                        &trans
-&bt BT_SEL 0  &bt BT_SEL 3  &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_NXT         &trans              &trans         &trans    &trans     &trans
+&kp TILDE     &kp F1        &kp F2           &kp F3          &kp F4             &kp F5  &kp F6      &kp F7         &kp F8    &kp F9     &kp F10          &kp F11   &kp F12  &none           &rgb_ug RGB_TOG                   &kp F6
+&none         &none         &kp LC(PAGE_UP)  &mmv MOVE_UP    &kp LC(PAGE_DOWN)  &none               &kp PAGE_UP    &none     &kp UP     &none            &kp HOME  &none    &none           &none            &rgb_ug RGB_EFF  &none
+&none         &none         &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &none               &kp PAGE_DOWN  &kp LEFT  &kp DOWN   &kp RIGHT_ARROW  &kp END   &none    &none           &rgb_ug RGB_HUI                   &none
+&none         &none         &none            &none           &none              &none               &none          &none     &mkp LCLK  &mkp RCLK        &none     &none    &none           &rgb_ug RGB_HUD                   &none
+&none         &none         &none            &none                              &none                              &none     &none      &none            &none     &none    &bt BT_CLR_ALL  &bt BT_CLR                        &none
+&bt BT_SEL 0  &bt BT_SEL 3  &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_NXT         &none               &none          &none     &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -81,12 +81,12 @@
 
         layer_3 {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
-&trans       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
-&trans       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
-&trans       &trans  &trans  &trans          &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
-&trans       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans
+&bootloader  &none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none  &none  &none         &none
+&none        &none  &none  &none  &none  &none             &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none        &none  &none  &none  &none  &none             &none  &none  &none  &none  &none  &none  &none  &none         &none
+&none        &none  &none  &none  &none  &none             &none  &none  &none  &none  &none  &none  &none  &none         &none
+&none        &none  &none  &none         &none                    &none  &none  &none  &none  &none  &none  &none         &none
+&none        &none  &none  &none  &none  &none             &none  &none  &none  &none
             >;
         };
     };
