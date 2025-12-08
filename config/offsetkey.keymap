@@ -36,11 +36,11 @@
 
         BASE {
             bindings = <
-&kp ESC    &kp N1        &kp N2        &kp N3  &kp N4  &kp N5     &kp N6      &kp N7  &kp N8  &kp N9         &kp N0    &kp MINUS  &kp EQUAL  &kp BSPC          &mo 1
-&kp TAB    &kp Q         &kp W         &kp B   &kp R   &kp T                  &kp J   &kp J   &kp I          &kp O     &kp P      &kp LBKT   &kp RBKT          &kp BSLH           &rgb_ug RGB_ON
-&kp CAPS   &kp A         &kp S         &kp D   &kp F   &kp G                  &kp H   &kp J   &kp K          &kp L     &kp SEMI   &kp APOS   &kp KP_ENTER      &rgb_ug RGB_OFF
-&kp LSHFT  &kp Z         &kp X         &kp C   &kp V   &kp B                  &kp N   &kp M   &kp COMMA      &kp DOT   &kp FSLH   &kp RSHFT  &kp UP_ARROW      &kp F3
-&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1           &kp SPACE                      &mo 1   &kp RIGHT_ALT  &kp RGUI  &kp RCTRL  &kp LEFT   &ext_power EP_ON  &ext_power EP_OFF
+&kp ESC    &kp N1        &kp N2        &kp N3    &kp N4  &kp N5     &kp N6      &kp N7  &kp N8  &kp N9         &kp N0    &kp MINUS  &kp EQUAL  &kp BSPC          &mo 1
+&kp TAB    &kp Q         &kp W         &ltq 1 C  &kp R   &kp T                  &kp J   &kp J   &kp I          &kp O     &kp P      &kp LBKT   &kp RBKT          &kp BSLH           &rgb_ug RGB_ON
+&kp CAPS   &kp A         &kp S         &kp D     &kp F   &kp G                  &kp H   &kp J   &kp K          &kp L     &kp SEMI   &kp APOS   &kp KP_ENTER      &rgb_ug RGB_OFF
+&kp LSHFT  &kp Z         &kp X         &kp C     &kp V   &kp B                  &kp N   &kp M   &kp COMMA      &kp DOT   &kp FSLH   &kp RSHFT  &kp UP_ARROW      &kp F3
+&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1             &kp SPACE                      &mo 1   &kp RIGHT_ALT  &kp RGUI  &kp RCTRL  &kp LEFT   &ext_power EP_ON  &ext_power EP_OFF
             >;
 
             label = "BASE";
