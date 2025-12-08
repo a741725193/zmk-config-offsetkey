@@ -19,7 +19,7 @@ layers:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - B
+  - {t: C, h: '1'}
   - R
   - T
   - J
@@ -90,7 +90,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
