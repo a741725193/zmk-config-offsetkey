@@ -1,6 +1,6 @@
 #include <physical_layouts.dtsi>
 
-/{
+/ {
     offsetkey_physical_layout: offsetkey_physical_layout {
     compatible = "zmk,physical-layout";
     display-name = "Default";

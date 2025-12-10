@@ -1,14 +1,8 @@
-/*
- * Copyright (c) 2020 ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/led/led.h>
 #include "offsetkey.dtsi"
 #include "trackball.dtsi"
-#define SYMBOLS 2
 #include "rgb.dtsi"
 
 / {
@@ -23,7 +17,7 @@
         row-gpios
             = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 30  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 30 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
@@ -56,7 +50,7 @@
 //only 1.04 1.07 remain
     kscan0: kscan_composite {
         compatible = "zmk,kscan-composite";
-         wakeup-source;
+        wakeup-source;
         rows = <6>;
         columns = <19>;
 
@@ -79,7 +73,6 @@
 };
 
 &pinctrl {
-
     spi3_default: spi3_default {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 1, 8)>; // WS2812_VEXT_DATA
@@ -99,12 +92,26 @@
     compatible = "zmk,input-listener";
     status = "okay";
     device = <&trackball>;
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP )>;
-    scroll {
-      layers = <SYMBOLS>;
-      input-processors = <&zip_xy_transform ( INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
-    };
+//     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP )>;
+//     scroll {
+//         layers = <FUNMED>;
+//         input-processors = <&zip_xy_transform ( INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 1>, <&zip_xy_to_scroll_mapper>;
+//     };
+//     snipe {
+//         layers = <NAVNUM>;
+//         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP )>, <&zip_xy_scaler 1 2>;
+//     };
+//     move {
+//         layers = <QWERTY AUTOMS>;
+//         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP )>, <&auto_mouse_layer AUTOMS 400>;
+//     };
   };
-}; 
+
+//   auto_mouse_layer: auto_mouse_layer {
+//     compatible = "zmk,input-processor-temp-layer";
+//     #input-processor-cells = <2>;
+//     require-prior-idle-ms = <500>;
+//   };
+};
 
 

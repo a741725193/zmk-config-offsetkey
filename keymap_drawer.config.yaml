@@ -17,7 +17,7 @@ draw_config:
   append_colon_to_layer_header: true
   small_pad: 2.0
   svg_extra_style: |
-    /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
+    /* For default styles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
@@ -36,7 +36,7 @@ draw_config:
       translate: -5px 2px;
       font-size: 20px;
     }
-    .sym_sub_text.shifted {
+    # .sym_sub_text.shifted {
       translate: 10px 13px;
       font-size: 10px;
       opacity: 1.0;
@@ -44,14 +44,14 @@ draw_config:
     .combo.sym_sub_text.tap {
       translate: -1px 1px;
     }
-    .combo.sym_sub_text.shifted {
+    # .combo.sym_sub_text.shifted {
       translate: 7px 5px;
       font-size: 10px;
       opacity: 1.0;
     }
 
     /* Toggle */
-    .toggle.shifted {
+    # .toggle.shifted {
       translate: -10px 12px;
     }
 
@@ -64,7 +64,7 @@ draw_config:
       translate: -7px 0px;
       font-size: 12px;
     }
-    .tap_dance.shifted {
+    # .tap_dance.shifted {
       translate: 7px 17px;
       font-size: 12px;
       opacity: 1.0;
@@ -74,7 +74,7 @@ draw_config:
     .sym_by_sym.tap {
       translate: -6px 0px;
     }
-    .sym_by_sym.shifted {
+    # .sym_by_sym.shifted {
       translate: 10px 12px;
       opacity: 1.0;
     }
@@ -82,7 +82,7 @@ draw_config:
     .combo.sym_by_sym.tap {
       translate: -35px 0px;
     }
-    .combo.sym_by_sym.shifted {
+    # .combo.sym_by_sym.shifted {
       translate: 35px 20px;
       opacity: 1.0;
     }
@@ -99,7 +99,7 @@ draw_config:
   shrink_wide_legends: 6
   glyph_tap_size: 18
   glyph_hold_size: 15
-  glyph_shifted_size: 15
+  # glyph_shifted_size: 15
   glyphs: {}
   glyph_urls:
     tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
@@ -113,14 +113,14 @@ parse_config:
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
   trans_legend:
-    tap: $$mdi:transfer$$
+    tap: $$mdi:menu-down$$
     type: trans
 
   raw_binding_map:
     # Layers
     "&ltq 1 BACKSPACE":
-      tap:  $$mdi:backspace$$
-      hold: '$$mdi:navigation-variant$$'
+      tap: $$mdi:backspace$$
+      hold: "$$mdi:navigation-variant$$"
     "&ltq 3 TAB":
       tap: $$mdi:keyboard-tab$$
       hold: $$mdi:numeric$$
@@ -135,62 +135,62 @@ parse_config:
       hold: $$mdi:navigation-variant$$
     # Home rows
     "&hm LEFT_GUI A":
-      tap: 'A'
-      shifted: $$mdi:apple-keyboard-command$$
+      tap: "A"
+      shifted: $$mdi:microsoft-windows$$
     "&hm LEFT_ALT S":
-      tap: 'S'
+      tap: "S"
       shifted: $$mdi:apple-keyboard-option$$
     "&hm LEFT_CONTROL D":
-      tap: 'D'
+      tap: "D"
       shifted: $$mdi:apple-keyboard-control$$
     "&hm LEFT_SHIFT F":
-      tap: 'F'
+      tap: "F"
       shifted: $$mdi:apple-keyboard-shift$$
     "&hm RIGHT_SHIFT J":
-      tap: 'J'
+      tap: "J"
       shifted: $$mdi:apple-keyboard-shift$$
     "&hm RIGHT_CONTROL K":
-      tap: 'K'
+      tap: "K"
       shifted: $$mdi:apple-keyboard-control$$
     "&hm RIGHT_ALT L":
-      tap: 'L'
+      tap: "L"
       shifted: $$mdi:apple-keyboard-option$$
     # self behaviors
     "&hm LG(LS(V)) P":
-      tap: 'P'
+      tap: "P"
       shifted: $$mdi:content-copy$$
     # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$
-      hold: ''
-      shifted: ''
+      hold: ""
+      shifted: ""
     "&msc SCRL_DOWN":
       tap: $$mdi:pan-down$$
-      hold: ''
-      shifted: ''
+      hold: ""
+      shifted: ""
     "&msc SCRL_LEFT":
       tap: $$mdi:pan-left$$
-      hold: ''
-      shifted: ''
+      hold: ""
+      shifted: ""
     "&msc SCRL_RIGHT":
       tap: $$mdi:pan-right$$
-      hold: ''
-      shifted: ''
+      hold: ""
+      shifted: ""
     "&mmv MOVE_LEFT":
       tap: $$mdi:menu-left$$
-      hold: ''
+      hold: ""
       shifted: $$mdi:mouse$$
     "&mmv MOVE_RIGHT":
       tap: $$mdi:menu-right$$
-      hold: ''
+      hold: ""
       shifted: $$mdi:mouse$$
     "&mmv MOVE_UP":
       tap: $$mdi:menu-up$$
-      hold: ''
+      hold: ""
       shifted: $$mdi:mouse$$
     "&mmv MOVE_DOWN":
       tap: $$mdi:menu-down$$
-      hold: ''
+      hold: ""
       shifted: $$mdi:mouse$$
     "&mkp LCLK":
       tap: $$mdi:mouse-left-click-outline$$
@@ -198,6 +198,10 @@ parse_config:
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
+    "&mkp MB4":
+      tap: "MB4"
+    "&mkp MB5":
+      tap: "MB5"
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
@@ -217,43 +221,54 @@ parse_config:
 
     # Bluetooth
     "&bt BT_SEL 0":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 1
+      tap: "BT SEL0"
     "&bt BT_SEL 1":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 2
+      tap: "BT SEL1"
     "&bt BT_SEL 2":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 3
+      tap: "BT SEL2"
     "&bt BT_SEL 3":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 4
+      tap: "BT SEL3"
     "&bt BT_SEL 4":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 5
-    "&out OUT_TOG":
-      shifted: $$mdi:usb$$
-      tap: $$mdi:toggle-switch$$
-      hold: $$mdi:bluetooth$$
+      tap: "BT SEL4"
+    "&bt BT_DISC 0":
+      tap: "BT DISC0"
+    "&bt BT_DISC 1":
+      tap: "BT DISC1"
+    "&bt BT_DISC 2":
+      tap: "BT DISC2"
+    "&bt BT_DISC 3":
+      tap: "BT DISC3"
+    "&bt BT_DISC 4":
+      tap: "BT DISC4"
     "&bt BT_PRV":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: $$mdi:arrow-up-bold$$
+      tap: "BT PRV"
     "&bt BT_NXT":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: $$mdi:arrow-down-bold$$
-    # Reset
+      tap: "BT NXT"
+    "&bt BT_CLR":
+      tap: "BT CLR"
+    "&bt BT_CLR_ALL":
+      tap: "BT CLRALL"
+
+    # Others
+    "&out OUT_TOG":
+      tap: "OUT TOG"
+    "&bl BL_TOG":
+      tap: "BL TOG"
+    "&bl BL_INC":
+      tap: "BL INC"
+    "&bl BL_DEC":
+      tap: "BL DEC"
     "&sys_reset":
       type: bootloader
-      tap: $$mdi:backup-restore$$
+      tap: "sys reset"
     "&bootloader":
-      tap: $$mdi:progress-download$$
+      tap: "boot loader"
+    "&studio_unlock":
+      tap: "studio unlock"
+    "&key_repeat":
+      tap: "key repeat"
+    "&pwr S":
+      tap: $$mdi:power-standby$$
 
   # ZMK
   zmk_keycode_map:
@@ -325,7 +340,7 @@ parse_config:
 
     LESS_THAN: <
     LT: <
-    PERIOD: '.'
+    PERIOD: "."
     DOT:
       tap: "."
       shifted: ">"
@@ -360,34 +375,34 @@ parse_config:
 
     # Numbers
     N1:
-      tap: 1
+      tap: " 1 "
       shifted: "!"
     N2:
-      tap: 2
+      tap: " 2 "
       shifted: "@"
     N3:
-      tap: 3
+      tap: " 3 "
       shifted: "#"
     N4:
-      tap: 4
+      tap: " 4 "
       shifted: "$"
     N5:
-      tap: 5
+      tap: " 5 "
       shifted: "%"
     N6:
-      tap: 6
+      tap: " 6 "
       shifted: "^"
     N7:
-      tap: 7
+      tap: " 7 "
       shifted: "&"
     N8:
-      tap: 8
+      tap: " 8 "
       shifted: "*"
     N9:
-      tap: 9
+      tap: " 9 "
       shifted: "("
     N0:
-      tap: 0
+      tap: " 0 "
       shifted: ")"
 
     # Modifiers
@@ -395,33 +410,35 @@ parse_config:
     LEFT_CONTROL: $$mdi:apple-keyboard-control$$
     LALT: $$mdi:apple-keyboard-option$$
     LEFT_ALT: $$mdi:apple-keyboard-option$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
     LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
-    LSHFT: $$mdi:apple-keyboard-shift$$
     LCMD: $$mdi:apple-keyboard-command$$
-    LG: $$mdi:apple-keyboard-command$$
-    LEFT_GUI: $$mdi:apple-keyboard-command$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
+    LWIN: $$mdi:microsoft-windows$$
+    LEFT_WIN: $$mdi:microsoft-windows$$
+    LG: $$mdi:microsoft-windows$$
+    LGUI: $$mdi:microsoft-windows$$
+    LEFT_GUI: $$mdi:microsoft-windows$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
     RALT: $$mdi:apple-keyboard-option$$
     RIGHT_ALT: $$mdi:apple-keyboard-option$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
     RSHIFT: $$mdi:apple-keyboard-shift$$
     RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
-    RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
-    RG: $$mdi:apple-keyboard-command$$
-    PSCRN: $$mdi:printer-outline$$
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
-    PAGE_UP:
-      tap: 'PgUp'
-      shifted: ''
-    PAGE_DOWN:
-      tap: 'PgDn'
-      shifted: ''
-    INSERT:
-       tap: 'Ins'
-       shifted: ''
+    RG: $$mdi:microsoft-windows$$
+    RGUI: $$mdi:microsoft-windows$$
+    RIGHT_GUI: $$mdi:microsoft-windows$$$
+    PSCRN: $$mdi:printer-outline$$
+    PAGE_UP: "PGUP"
+    PG_UP: "PGUP"
+    PAGE_DOWN: "PGDN"
+    PG_DN: "PGDN"
+    INSERT: "INS"
+
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
@@ -472,47 +489,51 @@ parse_config:
     C_PREV: $$mdi:skip-previous$$
     C_PP: $$mdi:play-pause$$
 
-    # Bluetooth
-    BT_CLR: $$mdi:bluetooth-off$$
-    BT_SEL: $$mdi:bluetooth-connect$$
-
     # Settings
     C_BRI_UP: $$mdi:brightness-5$$
     C_BRIGHTNESS_INC: $$mdi:brightness-5$$
-    C_BRI_DN: $$mdi:brightness-7$$
-    C_BRI_DEC: $$mdi:brightness-7$$
-    C_BRIGHTNESS_DEC: $$mdi:brightness-7$$
+    C_BRI_DN: $$mdi:brightness-4$$
+    C_BRI_DEC: $$mdi:brightness-4$$
+    C_BRIGHTNESS_DEC: $$mdi:brightness-4$$
 
     # System
     C_POWER: $$mdi:power-standby$$
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
     K_FIND: $$mdi:apple-finder$$
-    # Command + 
+
+    # Numpad
+    # KP_PLUS: $$mdi:plus-circle-outline$$
+    # KP_MINUS: $$mdi:minus-circle-outline$$
+    # KP_SUBTRACT: $$mdi:minus-circle-outline$$
+    # KP_ASTERISK: $$mdi:asterisk-circle-outline$$
+    # KP_MULTIPLY: $$mdi:asterisk-circle-outline$$
+
+    # Command +
     LG(A):
-      tap: 'A'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "A"
+      hold: $$mdi:microsoft-windows$$
     LG(S):
-      tap: 'S'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "S"
+      hold: $$mdi:microsoft-windows$$
     LG(D):
-      tap: 'D'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "D"
+      hold: $$mdi:microsoft-windows$$
     LG(F):
-      tap: 'F'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "F"
+      hold: $$mdi:microsoft-windows$$
     LG(Z):
-      tap: 'Z'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "Z"
+      hold: $$mdi:microsoft-windows$$
     LG(X):
-      tap: 'X'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "X"
+      hold: $$mdi:microsoft-windows$$
     LG(C):
-      tap: 'C'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "C"
+      hold: $$mdi:microsoft-windows$$
     LG(V):
-      tap: 'V'
-      hold: $$mdi:apple-keyboard-command$$
+      tap: "V"
+      hold: $$mdi:microsoft-windows$$
     # Zoom
     RG(RS(A)):
       tap: $$mdi:microphone$$
