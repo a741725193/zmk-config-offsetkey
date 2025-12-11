@@ -39,7 +39,7 @@
 &mt LCTRL ESC   &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI        &kp SQT         &kp ENTER                       &kp PG_DN       &kp G
 &kp LSHFT       &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RSHFT                       &kp UP          &kp DEL         &kp B
 &kp LCTRL       &kp LGUI        &kp LALT        &lt FUNMED CAPS &lt NAVNUM SPACE                &lt SYMBOL SPACE                &kp RALT        &kp RGUI        &kp RCTRL                       &kp LEFT        &kp DOWN        &kp RIGHT       &kp SPACE
-&kp C_BRI_UP    &kp C_PREV      &kp C_NEXT      &kp C_BRI_DN    &kp C_PP        &kp C_MUTE      &mkp LCLK       &mkp MCLK       &mkp RCLK       &none
+&msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN  &mkp MCLK       &kp C_MUTE      &mkp LCLK       &mkp MCLK       &mkp RCLK       &none
         >; };
         AUTOMS { label = "AUTOMS"; bindings = <
 &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
@@ -71,12 +71,12 @@
 &sk LCTRL       &kp SQT         &kp DQT         &kp LBRC        &kp RBRC        &kp PIPE        &kp PLUS        &kp EQUAL       &kp LPAR        &kp RPAR        &kp COLON       &kp DQT         &trans                          &trans          &trans
 &sk LSHFT       &kp GRAVE       &kp TILDE       &kp LBKT        &kp RBKT        &kp BSLH        &kp UNDER       &kp MINUS       &kp LT          &kp GT          &kp QMARK       &trans                          &trans          &trans          &trans
 &sk LCTRL       &sk LGUI        &sk LALT        &caps_word      &mo CONFIG                      &trans                          &trans          &trans          &trans                          &trans          &trans          &trans          &trans
-&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&kp C_BRI_UP    &kp C_PREV      &kp C_NEXT      &kp C_BRI_DN    &kp C_PP        &trans          &trans          &trans          &trans          &trans
         >; };
         CONFIG { label = "CONFIG"; bindings = <
 &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_DISC 4   &bt BT_PRV      &bt BT_NXT      &bt BT_CLR_ALL  &trans          &trans
 &trans          &trans          &trans          &trans          &trans          &trans          &rgb_ug RGB_EFR &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_ON  &out OUT_USB    &out OUT_BLE    &trans          &trans
-&trans          &trans          &trans          &trans          &trans          &trans          &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_OFF &ext_power EP_TOG               &trans          &trans
+&trans          &trans          &trans          &trans          &trans          &trans          &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_OFF &rgb_ug RGB_TOG                 &trans          &trans
 &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans                          &trans          &trans          &trans
 &bootloader     &trans          &sys_reset      &trans          &trans                          &trans                          &sys_reset      &trans          &bootloader                     &trans          &trans          &trans          &trans
 &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
