@@ -76,11 +76,11 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:keyboard-space$$
-  - $$mdi:brightness-5$$
-  - $$mdi:skip-previous$$
-  - $$mdi:skip-next$$
-  - $$mdi:brightness-4$$
-  - $$mdi:play-pause$$
+  - $$mdi:pan-up$$
+  - $$mdi:pan-left$$
+  - $$mdi:pan-right$$
+  - $$mdi:pan-down$$
+  - $$mdi:mouse-scroll-wheel$$
   - $$mdi:volume-off$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
@@ -420,11 +420,11 @@ layers:
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
+  - $$mdi:brightness-5$$
+  - $$mdi:skip-previous$$
+  - $$mdi:skip-next$$
+  - $$mdi:brightness-4$$
+  - $$mdi:play-pause$$
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
@@ -475,7 +475,7 @@ layers:
   - RGB BRD
   - RGB SPD
   - RGB OFF
-  - EP TOG
+  - RGB TOG
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
