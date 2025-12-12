@@ -62,7 +62,7 @@
 &kp HOME        &kp END         &kp BSPC        &kp UP          &kp DEL         &kp PG_UP       &kp KP_NLCK     &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MINUS    &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &trans          &trans
 &sk LCTRL       &kp ENTER       &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp KP_DIVIDE   &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &kp INS         &kp KP_ENTER                    &trans          &trans
 &sk LSHFT       &mkp MB4        &mkp RCLK       &mkp MCLK       &mkp LCLK       &mkp MB5        &kp KP_MULTIPLY &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_DOT      &trans                          &kp PG_UP       &trans          &trans
-&sk LCTRL       &sk LGUI        &mo CONFIG      &kp LALT        &trans                          &kp KP_N0                       &trans          &trans          &trans                          &kp HOME        &kp PG_DN       &kp END         &trans
+&sk LCTRL       &sk LGUI        &lt CONFIG INS  &kp LALT        &trans                          &kp KP_N0                       &trans          &trans          &trans                          &kp HOME        &kp PG_DN       &kp END         &trans
 &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
         >; };
         SYMBOL { label =  "SYMBOL"; bindings = <
