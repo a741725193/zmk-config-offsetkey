@@ -323,7 +323,7 @@ layers:
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:microsoft-windows$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - CONFIG
   - $$mdi:apple-keyboard-option$$
   - {type: held}
   - KP 0
@@ -411,7 +411,7 @@ layers:
   - {t: '$$mdi:microsoft-windows$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:alpha-w-box$$
-  - CONFIG
+  - _
   - {type: held}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
@@ -458,9 +458,9 @@ layers:
   - RGB SAI
   - RGB BRI
   - RGB SPI
-  - RGB ON
   - OUT USB
   - OUT BLE
+  - OUT TOG
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
@@ -475,7 +475,10 @@ layers:
   - RGB BRD
   - RGB SPD
   - RGB OFF
-  - RGB TOG
+  - RGB ON
+  - {t: '$$mdi:menu-down$$', type: trans}
+  - {t: '$$mdi:menu-down$$', type: trans}
+  - {t: sys reset, type: bootloader}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
@@ -486,20 +489,17 @@ layers:
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: '$$mdi:menu-down$$', type: trans}
+  - {t: sys reset, type: bootloader}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - boot loader
   - {t: '$$mdi:menu-down$$', type: trans}
-  - {t: sys reset, type: bootloader}
+  - {type: held}
   - {t: '$$mdi:menu-down$$', type: trans}
   - {type: held}
-  - {type: held}
-  - {t: sys reset, type: bootloader}
+  - RGB TOG
+  - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:menu-down$$', type: trans}
   - boot loader
   - {t: '$$mdi:menu-down$$', type: trans}

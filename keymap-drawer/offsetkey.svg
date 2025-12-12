@@ -2001,9 +2001,9 @@ rect.held, rect.combo.held {
 <g transform="translate(175, 252)" class="key keypos-64">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key"/>
-<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-option"/>
-<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:gesture-tap-hold"/>
-</g>
+<a href="#CONFIG">
+<text x="0" y="-4" class="key tap layer-activator">CONFIG</text>
+</a></g>
 <g transform="translate(245, 252)" class="key keypos-65">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key"/>
@@ -2455,9 +2455,8 @@ rect.held, rect.combo.held {
 <g transform="translate(343, 252)" class="key keypos-66">
 <rect rx="6" ry="6" x="-61" y="-26" width="122" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-55" y="-24" width="110" height="40" class="key"/>
-<a href="#CONFIG">
-<text x="0" y="-4" class="key tap layer-activator">CONFIG</text>
-</a></g>
+<text x="0" y="-4" class="key tap">_</text>
+</g>
 <g transform="translate(959, 252)" class="key held keypos-67">
 <rect rx="6" ry="6" x="-75" y="-26" width="150" height="52" class="key held side"/>
 <rect rx="4" ry="4" x="-69" y="-24" width="138" height="40" class="key held"/>
@@ -2729,21 +2728,21 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">RGB</tspan><tspan x="0" dy="1.2em">ON</tspan>
+<tspan x="0" dy="-0.6em">OUT</tspan><tspan x="0" dy="1.2em">USB</tspan>
 </text>
 </g>
 <g transform="translate(1204, 84)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">OUT</tspan><tspan x="0" dy="1.2em">USB</tspan>
+<tspan x="0" dy="-0.6em">OUT</tspan><tspan x="0" dy="1.2em">BLE</tspan>
 </text>
 </g>
 <g transform="translate(1274, 84)" class="key keypos-29">
 <rect rx="6" ry="6" x="-40" y="-26" width="80" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-34" y="-24" width="68" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">OUT</tspan><tspan x="0" dy="1.2em">BLE</tspan>
+<tspan x="0" dy="-0.6em">OUT</tspan><tspan x="0" dy="1.2em">TOG</tspan>
 </text>
 </g>
 <g transform="translate(1344, 84)" class="key trans keypos-30">
@@ -2832,7 +2831,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-61" y="-26" width="122" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-55" y="-24" width="110" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">RGB</tspan><tspan x="0" dy="1.2em">TOG</tspan>
+<tspan x="0" dy="-0.6em">RGB</tspan><tspan x="0" dy="1.2em">ON</tspan>
 </text>
 </g>
 <g transform="translate(1344, 140)" class="key trans keypos-45">
@@ -2845,10 +2844,12 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:menu-down"/>
 </g>
-<g transform="translate(63, 196)" class="key trans keypos-47">
-<rect rx="6" ry="6" x="-61" y="-26" width="122" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-55" y="-24" width="110" height="40" class="key trans"/>
-<use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:menu-down"/>
+<g transform="translate(63, 196)" class="key bootloader keypos-47">
+<rect rx="6" ry="6" x="-61" y="-26" width="122" height="52" class="key bootloader side"/>
+<rect rx="4" ry="4" x="-55" y="-24" width="110" height="40" class="key bootloader"/>
+<text x="0" y="-4" class="key bootloader tap">
+<tspan x="0" dy="-0.6em">sys</tspan><tspan x="0" dy="1.2em">reset</tspan>
+</text>
 </g>
 <g transform="translate(154, 196)" class="key trans keypos-48">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2900,10 +2901,12 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:menu-down"/>
 </g>
-<g transform="translate(1211, 196)" class="key trans keypos-58">
-<rect rx="6" ry="6" x="-47" y="-26" width="94" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-41" y="-24" width="82" height="40" class="key trans"/>
-<use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:menu-down"/>
+<g transform="translate(1211, 196)" class="key bootloader keypos-58">
+<rect rx="6" ry="6" x="-47" y="-26" width="94" height="52" class="key bootloader side"/>
+<rect rx="4" ry="4" x="-41" y="-24" width="82" height="40" class="key bootloader"/>
+<text x="0" y="-4" class="key bootloader tap">
+<tspan x="0" dy="-0.6em">sys</tspan><tspan x="0" dy="1.2em">reset</tspan>
+</text>
 </g>
 <g transform="translate(1288, 196)" class="key trans keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2932,12 +2935,9 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key trans"/>
 <use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:menu-down"/>
 </g>
-<g transform="translate(175, 252)" class="key bootloader keypos-64">
-<rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key bootloader side"/>
-<rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key bootloader"/>
-<text x="0" y="-4" class="key bootloader tap">
-<tspan x="0" dy="-0.6em">sys</tspan><tspan x="0" dy="1.2em">reset</tspan>
-</text>
+<g transform="translate(175, 252)" class="key held keypos-64">
+<rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key held side"/>
+<rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key held"/>
 </g>
 <g transform="translate(245, 252)" class="key trans keypos-65">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key trans side"/>
@@ -2948,16 +2948,17 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-61" y="-26" width="122" height="52" class="key held side"/>
 <rect rx="4" ry="4" x="-55" y="-24" width="110" height="40" class="key held"/>
 </g>
-<g transform="translate(959, 252)" class="key held keypos-67">
-<rect rx="6" ry="6" x="-75" y="-26" width="150" height="52" class="key held side"/>
-<rect rx="4" ry="4" x="-69" y="-24" width="138" height="40" class="key held"/>
-</g>
-<g transform="translate(1064, 252)" class="key bootloader keypos-68">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key bootloader side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key bootloader"/>
-<text x="0" y="-4" class="key bootloader tap">
-<tspan x="0" dy="-0.6em">sys</tspan><tspan x="0" dy="1.2em">reset</tspan>
+<g transform="translate(959, 252)" class="key keypos-67">
+<rect rx="6" ry="6" x="-75" y="-26" width="150" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-69" y="-24" width="138" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">RGB</tspan><tspan x="0" dy="1.2em">TOG</tspan>
 </text>
+</g>
+<g transform="translate(1064, 252)" class="key trans keypos-68">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:menu-down"/>
 </g>
 <g transform="translate(1120, 252)" class="key trans keypos-69">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
