@@ -2001,8 +2001,9 @@ rect.held, rect.combo.held {
 <g transform="translate(175, 252)" class="key keypos-64">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">INS</text>
 <a href="#CONFIG">
-<text x="0" y="-4" class="key tap layer-activator">CONFIG</text>
+<text x="0" y="24" class="key hold layer-activator">CONFIG</text>
 </a></g>
 <g transform="translate(245, 252)" class="key keypos-65">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>

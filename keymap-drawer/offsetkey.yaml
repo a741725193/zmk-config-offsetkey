@@ -323,7 +323,7 @@ layers:
   - {t: '$$mdi:menu-down$$', type: trans}
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:microsoft-windows$$', h: '$$mdi:gesture-tap-hold$$'}
-  - CONFIG
+  - {t: INS, h: CONFIG}
   - $$mdi:apple-keyboard-option$$
   - {type: held}
   - KP 0
