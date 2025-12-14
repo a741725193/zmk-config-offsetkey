@@ -20,7 +20,7 @@ manifest:
       revision: v0.3.0
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: kumamuk-git
       revision: main
     - name: zmk-nice-oled
       remote: mctechnology17
@@ -33,6 +33,6 @@ manifest:
       revision: main
     - name: zmk-tog-io
       remote: a741725193
-      revision: main 
+      revision: main
   self:
     path: config
