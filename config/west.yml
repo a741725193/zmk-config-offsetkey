@@ -12,14 +12,12 @@ manifest:
       url-base: https://github.com/a741725193
     - name: infused-kim
       url-base: https://github.com/infused-kim
-    - name: a741725193
-      url-base: https://github.com/a741725193
     - name: madswolf
       url-base: https://github.com/madswolf
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3.0
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: badjeff
