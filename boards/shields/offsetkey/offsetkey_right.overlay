@@ -11,7 +11,7 @@
 #include "split_inputs.dtsi"
 #include "trackpoint.dtsi"
 #define SYMBOLS 2
-#include "rgb.dtsi"
+//#include "rgb.dtsi"
 
 / {
 	chosen {
