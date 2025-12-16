@@ -9,7 +9,7 @@
 #include "offsetkey.dtsi"
 #include "trackball.dtsi"
 #define SYMBOLS 2
-//#include "rgb.dtsi"
+#include "rgb.dtsi"
 
 / {
 	chosen {
