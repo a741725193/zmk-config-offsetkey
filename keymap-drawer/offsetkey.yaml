@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - END
   - G
-  - $$mdi:apple-keyboard-shift$$
+  - '&shift_Caps'
   - Z
   - X
   - C
