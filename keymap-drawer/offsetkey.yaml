@@ -166,7 +166,7 @@ layers:
   - HOME
   - END
   - PgDn
-  - SCROLLLOCK
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
