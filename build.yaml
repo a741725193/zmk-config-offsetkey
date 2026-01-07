@@ -1,12 +1,12 @@
 include:
   - board: eyelash_nano
     shield: offsetkey_peripheral_left
+    artifact-name: offsetkey_peripheral_left
   - board: eyelash_nano
-    shield: offsetkey_peripheral_right 
-  - board: eyelash_nano
-    shield: offsetkey_central_dongle dongle_display
+    shield: offsetkey_peripheral_right
+    artifact-name: offsetkey_peripheral_right
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: offsetkey_dongle
   - board: eyelash_nano
     shield: settings_reset
+    artifact-name: settings_reset
