@@ -6,3 +6,6 @@ config SHIELD_OFFSETKEY_PERIPHERAL_LEFT
 
 config SHIELD_OFFSETKEY_PERIPHERAL_RIGHT
     def_bool $(shields_list_contains,offsetkey_peripheral_right)
+
+config DONGLE_MODE
+    bool "Build in dongle mode"
