@@ -49,7 +49,7 @@
 &kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &kp SPACE              &mkp LCLK  &mkp LCLK  &mkp RCLK      &none
             >;
 
-            label = "BASE";
+            label = "layer0";
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
@@ -62,6 +62,8 @@
 &trans     &trans  &trans  &trans          &trans                      &trans        &trans        &trans        &trans   &trans   &trans  &trans               &trans
 &trans     &trans  &trans  &trans  &trans  &trans              &trans  &trans        &trans        &trans
             >;
+          label = "layer1";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         layer_2 {
@@ -73,6 +75,8 @@
 &trans     &trans  &trans  &trans          &trans                               &trans          &trans           &trans           &trans           &trans   &bt BT_CLR_ALL  &bt BT_CLR           &trans
 &trans     &trans  &trans  &trans  &trans  &trans              &trans           &trans          &trans           &trans
             >;
+    label = "layer2";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         layer_3 {
@@ -84,6 +88,8 @@
 &trans  &trans  &trans  &trans          &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans
             >;
+  label = "layer3";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
     };
 };
