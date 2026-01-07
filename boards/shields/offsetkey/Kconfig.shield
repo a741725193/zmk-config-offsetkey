@@ -1,5 +1,8 @@
-config SHIELD_OFFSETKEY_LEFT
-    def_bool $(shields_list_contains,offsetkey_left)
+config SHIELD_OFFSETKEY_CENTRAL_DONGLE
+    def_bool $(shields_list_contains,offsetkey_central_dongle)
 
-config SHIELD_OFFSETKEY_RIGHT
-    def_bool $(shields_list_contains,offsetkey_right)
+config SHIELD_OFFSETKEY_PERIPHERAL_LEFT
+    def_bool $(shields_list_contains,offsetkey_peripheral_left)
+
+config SHIELD_OFFSETKEY_PERIPHERAL_RIGHT
+    def_bool $(shields_list_contains,offsetkey_peripheral_right)
