@@ -38,6 +38,6 @@ manifest:
       revision: main
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: main
+      revision: v0.3
   self:
     path: config
