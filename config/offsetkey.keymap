@@ -61,7 +61,7 @@
         };
     };
 
-    keymap {
+   keymap {
         compatible = "zmk,keymap";
 
         BASE {
