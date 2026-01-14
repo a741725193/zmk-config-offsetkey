@@ -16,7 +16,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 7   // 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
