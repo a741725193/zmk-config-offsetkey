@@ -5,6 +5,8 @@
  */
 #include <dt-bindings/led/led.h>
 #include "offsetkey.dtsi"
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
 / {
 	chosen {
         zmk,underglow = &led_strip;
