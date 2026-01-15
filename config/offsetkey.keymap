@@ -16,7 +16,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20  // 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20  
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -78,7 +78,7 @@
             >;
 
             label = "layer0";
-            sensor-bindings = <&inc_dec_kp A B>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         layer_1 {
