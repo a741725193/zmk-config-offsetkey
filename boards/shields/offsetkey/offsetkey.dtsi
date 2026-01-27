@@ -5,8 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 
-#include <dt-bindings/zmk/matrix_transform.h>
-#include  "offsetkey_physical_layout.dtsi"
+
 
 
 / {
@@ -25,7 +24,7 @@
 
 	left_encoder: encoder_left {
 		compatible = "alps,ec11";
-		label = "LEFT_ENCODER";
+		label = "encoder_left ";
 		resolution = <4>;
         steps = <40>;
         a-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
