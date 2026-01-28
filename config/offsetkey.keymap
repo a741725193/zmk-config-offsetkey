@@ -6,6 +6,7 @@
 #define MOUSE_TP 3
 #define MOUSE_TP_SET 4
 
+#include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors/toggle_io.dtsi>
 #include <behaviors/on_io.dtsi>
