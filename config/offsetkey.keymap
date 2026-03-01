@@ -90,6 +90,7 @@
 
             label = "layer0";
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            
         };
 
         layer_1 {
