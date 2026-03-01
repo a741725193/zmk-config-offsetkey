@@ -41,7 +41,6 @@
         bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
         tap-ms = <30>;
-
     };
 
     behaviors {
@@ -79,7 +78,7 @@
             >;
 
             label = "layer0";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_1 {
