@@ -83,11 +83,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8        &kp F9        &kp F10       &kp F11  &kp F12  &trans  &kp HOME             &kp F6
-&trans     &trans  &trans  &trans  &trans  &trans              &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans   &trans  &trans      &kp END  &trans
-&trans     &trans  &trans  &trans  &trans  &trans              &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans   &trans  &kp INSERT           &trans
-&trans     &trans  &trans  &trans  &trans  &trans              &none   &none         &trans        &trans        &trans   &trans   &trans  &trans               &trans
-&trans     &trans  &trans  &trans          &trans                      &trans        &trans        &trans        &trans   &trans   &trans  &trans               &trans
+&kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8        &kp F9        &kp F10       &kp F11  &kp F12  &trans     &kp HOME             &kp F6
+&trans     &trans  &trans  &trans  &trans  &trans              &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans   &trans     &kp PG_UP   &kp END  &trans
+&trans     &trans  &trans  &trans  &trans  &trans              &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans   &kp PG_DN  &kp INSERT           &trans
+&trans     &trans  &trans  &trans  &trans  &trans              &none   &none         &trans        &trans        &trans   &trans   &trans     &trans               &trans
+&trans     &trans  &trans  &trans          &trans                      &trans        &trans        &trans        &trans   &trans   &trans     &trans               &trans
 &trans     &trans  &trans  &trans  &trans  &trans              &trans  &trans        &trans        &trans
             >;
 
