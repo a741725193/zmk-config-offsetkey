@@ -4,17 +4,19 @@
  * SPDX-License-Identifier: MIT
  */
 #include <dt-bindings/zmk/input_transform.h>
-#include <input/processors.dtsi>
 #include <dt-bindings/led/led.h>
+#include <input/processors.dtsi>
+#include <behaviors/battery_history_request.dtsi>
 #include "offsetkey.dtsi"
 #include "trackball.dtsi"
-#define SYMBOLS 2
 #include "rgb.dtsi"
+#include <input/processors/runtime-input-processor.dtsi>
 
 / {
 	chosen {
         zmk,underglow = &led_strip;
     };
+
 
     kscan1: kscan {
         wakeup-source;
@@ -33,11 +35,11 @@
             , <&gpio1 9  GPIO_ACTIVE_HIGH>
             , <&gpio0 14  GPIO_ACTIVE_HIGH>
             , <&gpio0 12  GPIO_ACTIVE_HIGH>
-            , <&gpio0 8  GPIO_ACTIVE_HIGH>  
-            , <&gpio0 19  GPIO_ACTIVE_HIGH>  
-            , <&gpio0 16  GPIO_ACTIVE_HIGH>  
-            , <&gpio1 5  GPIO_ACTIVE_HIGH> 
-            , <&gpio1 11 GPIO_ACTIVE_HIGH> 
+            , <&gpio0 8  GPIO_ACTIVE_HIGH>
+            , <&gpio0 19  GPIO_ACTIVE_HIGH>
+            , <&gpio0 16  GPIO_ACTIVE_HIGH>
+            , <&gpio1 5  GPIO_ACTIVE_HIGH>
+            , <&gpio1 11 GPIO_ACTIVE_HIGH>
             ;
     };
 
@@ -95,16 +97,17 @@
 };
 
 / {
-  trackball_listener: trackball_listener {
-    compatible = "zmk,input-listener";
-    status = "okay";
-    device = <&trackball>;
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP )>;
-    scroll {
-      layers = <SYMBOLS>;
-      input-processors = <&zip_xy_transform ( INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
+    trackball_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&mouse_runtime_input_processor>;
+
+        scroller {
+            layers = <2>;
+            input-processors =
+                <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
+                <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+        };
     };
-  };
-}; 
-
-
+};
