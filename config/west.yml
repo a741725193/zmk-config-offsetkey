@@ -26,7 +26,7 @@ manifest:
       revision: main
     - name: zmk-module-ble-management
       remote: cormoran
-      revision: main
+      revision: 851661cd21f2aded8ec649da86e01a207dc4b973
     - name: zmk-module-battery-history
       remote: cormoran
       revision: main
@@ -35,10 +35,10 @@ manifest:
       revision: main
     - name: zmk-module-runtime-input-processor
       remote: cormoran
-      revision: main
+      revision: dbf92f764de8b6ffd60bf5850514302875fe2570
     - name: zmk-pmw3610-driver
       remote: cormoran
-      revision: main
+      revision: 274c92bec8a0e98499ceff653b8b9bd6486effbe
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: main
