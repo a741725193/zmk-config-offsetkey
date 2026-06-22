@@ -7,14 +7,15 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
     with:
       build_matrix_path: build.yaml
       archive_name: firmware-kb-offsetkey
 
   build-dongle:
     needs: build
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
     with:
       build_matrix_path: build-dongle.yaml
       archive_name: firmware-kb-offsetkey-dongle
+
