@@ -6,7 +6,19 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
 
-endif
+endif # Keyboard with dongle
+
+
+if SHIELD_OFFSETKEY_PERIPHERAL_RIGHT && ! DONGLE_MODE
+
+config ZMK_KEYBOARD_NAME
+	default "offsetkey"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif # Keyboard without dongle
+
 
 if SHIELD_OFFSETKEY_CENTRAL_DONGLE || SHIELD_OFFSETKEY_PERIPHERAL_LEFT || SHIELD_OFFSETKEY_PERIPHERAL_RIGHT
 
@@ -14,6 +26,7 @@ config ZMK_SPLIT
 	default y
 	
 endif
+
 
 if ZMK_DISPLAY
 
@@ -28,6 +41,7 @@ choice ZMK_DISPLAY_WORK_QUEUE
 endchoice
 
 endif
+
 if LVGL
 
 config LV_Z_VDB_SIZE
@@ -43,7 +57,7 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
-endif
+endif # LVGL
 
 
 
