@@ -2,7 +2,7 @@ include:
   - board: eyelash_nano
     shield: offsetkey_peripheral_left
   - board: eyelash_nano
-    shield: offsetkey_peripheral_right 
+    shield: offsetkey_peripheral_right
   - board: eyelash_nano
     shield: offsetkey_central_dongle dongle_display
     snippet: studio-rpc-usb-uart

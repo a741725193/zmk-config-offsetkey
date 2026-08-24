@@ -3,7 +3,7 @@ if SHIELD_OFFSETKEY_CENTRAL_DONGLE
 config ZMK_KEYBOARD_NAME
 	default "offsetkey"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
 endif
@@ -12,7 +12,7 @@ if SHIELD_OFFSETKEY_CENTRAL_DONGLE || SHIELD_OFFSETKEY_PERIPHERAL_LEFT || SHIELD
 
 config ZMK_SPLIT
 	default y
-	
+
 endif
 
 if ZMK_DISPLAY
@@ -28,24 +28,6 @@ choice ZMK_DISPLAY_WORK_QUEUE
 endchoice
 
 endif
-if LVGL
-
-config LV_Z_VDB_SIZE
-    default 64
-
-config LV_DPI_DEF
-    default 148
-
-config LV_Z_BITS_PER_PIXEL
-    default 1
-
-choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
-endchoice
-
-endif
-
-
 
 if ZMK_BACKLIGHT
 
@@ -56,18 +38,3 @@ config LED_PWM
     default y
 
 endif # ZMK_BACKLIGHT
-
-
-
-config BOARD_ENABLE_DCDC
-    bool "Enable DCDC mode"
-    select SOC_DCDC_NRF52X
-    default y
-    depends on (SHIELD_OFFSETKEY_LEFT || SHIELD_OFFSETKEY_RIGHT)
-
-config BOARD_ENABLE_DCDC_HV
-    bool "Enable High Voltage DCDC converter"
-    default y
-    select SOC_DCDC_NRF52X_HV
-    depends on (SHIELD_OFFSETKEY_LEFT || SHIELD_OFFSETKEY_RIGHT)
-

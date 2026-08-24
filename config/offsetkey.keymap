@@ -8,10 +8,6 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <behaviors/toggle_io.dtsi>
-#include <behaviors/on_io.dtsi>
-#include <behaviors/off_io.dtsi>
-#include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <behaviors/runtime-sensor-rotate.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -19,6 +15,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <behaviors/runtime_macro.dtsi>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
